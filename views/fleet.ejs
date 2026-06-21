@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Luxury Fleet of Cars, SUVs & Coaches in Jaipur | Rajasthali Tours</title>
+  <meta name="description" content="View our premium fleet of vehicles in Jaipur, Rajasthan. Luxury Mercedes, Toyota Vellfire, Fortuner, Innova Crysta, Force Urbania and luxury AC tourist coaches. Best rates for outstation tours & weddings.">
+  <meta name="keywords" content="luxury car rental Jaipur, Toyota Innova Crysta Jaipur, Tempo Traveller Jaipur, luxury coach hire Rajasthan, Force Urbania rental Jaipur, wedding cars Jaipur">
+  <link rel="canonical" href="https://rajasthalitours.com/fleet">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Premium Fleet of Cars, SUVs & Coaches | Rajasthali Tours">
+  <meta property="og:description" content="Explore our luxury fleet of 500+ vehicles including Mercedes, Toyota Vellfire, Fortuner, Innova Crysta, Force Urbania and luxury AC coaches in Rajasthan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/fleet">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/vehicles_fleet.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="seo-hero">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Our Fleet</span>
+      </nav>
+      <div class="seo-hero-badge">IATA Certified · 500+ Chauffeur-Driven Vehicles</div>
+      <h1>Our Premium <span style="color: var(--brand-pink);">Vehicle Fleet</span></h1>
+      <p class="seo-hero-sub">From premium executive sedans to spacious SUVs, luxury Tempo Travellers, and large-sized AC tourist coaches, we maintain a spotless fleet for every travel need.</p>
+      
+      <div class="seo-hero-stats">
+        <div><strong>500+</strong><span>Vehicles</span></div>
+        <div><strong>100%</strong><span>AC & Maintained</span></div>
+        <div><strong>GPS</strong><span>Real-time Tracking</span></div>
+        <div><strong>24/7</strong><span>Roadside Assistance</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="seo-main">
+    <div class="seo-container">
+      
+      <!-- Category Tabs -->
+      <div class="fleet-filter-wrapper">
+        <div class="fleet-filter-tabs">
+          <button class="fleet-tab-btn active" data-filter="all">All Vehicles</button>
+          <button class="fleet-tab-btn" data-filter="luxury">Luxury Vehicles</button>
+          <button class="fleet-tab-btn" data-filter="suvs">SUVs & MUVs</button>
+          <button class="fleet-tab-btn" data-filter="vans">Vans & Travellers</button>
+          <button class="fleet-tab-btn" data-filter="coaches">Coaches & Buses</button>
+          <button class="fleet-tab-btn" data-filter="economy">Economy Sedans</button>
+        </div>
+      </div>
+
+      <!-- Fleet Grid -->
+      <div class="fleet-catalog-grid">
+        <% vehicles.forEach(function(veh) { %>
+        <div class="fleet-catalog-card" data-category="<%= veh.categorySlug %>">
+          <div class="fleet-catalog-img-wrap">
+            <img src="<%= veh.image %>" alt="<%= veh.name %>">
+            <span class="fleet-catalog-tag-badge"><%= veh.type %></span>
+          </div>
+          <div class="fleet-catalog-info">
+            <div class="fleet-catalog-category"><%= veh.category %></div>
+            <h3><%= veh.name %></h3>
+            <p><%= veh.description %></p>
+            
+            <div class="fleet-specs-row">
+              <div class="fleet-spec-item" title="Seating Capacity">
+                <span>👥 <%= veh.capacity %></span>
+              </div>
+              <div class="fleet-spec-item" title="Luggage capacity">
+                <span>🧳 <%= veh.luggage %></span>
+              </div>
+              <div class="fleet-spec-item" title="Air Conditioning">
+                <span>❄️ <%= veh.ac ? 'Fully AC' : 'Non-AC Available' %></span>
+              </div>
+            </div>
+
+            <div class="fleet-catalog-features">
+              <% veh.features.forEach(function(feat) { %>
+              <span class="fleet-feature-pill">✓ <%= feat %></span>
+              <% }); %>
+            </div>
+
+            <div class="fleet-catalog-actions">
+              <a href="tel:+919785307799" class="btn-fleet-call">📞 Call Now</a>
+              <a href="https://wa.me/919785307799?text=Hello!%20I%20want%20to%20enquire%20about%20<%= encodeURIComponent(veh.name) %>." class="btn-fleet-wa" target="_blank">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+
+      <!-- ====== FLEET GALLERY SECTION ====== -->
+      <section class="fleet-gallery-section" style="margin-top: 80px; margin-bottom: 60px;">
+        <div class="text-center" style="margin-bottom: 40px;">
+          <h2>Fleet In Action</h2>
+          <p class="seo-section-sub">Real pictures of our luxury cabs, SUVs, Force Urbania vans, and tourist coaches serving our clients across Jaipur and Rajasthan.</p>
+        </div>
+        
+        <div class="fleet-photo-gallery">
+          <% actionPhotos.forEach(function(photo, index) { %>
+          <div class="gallery-photo-card" onclick="openLightbox(<%= index %>)">
+            <img src="<%= photo.path %>" alt="<%= photo.caption %>" loading="lazy">
+            <div class="gallery-photo-overlay">
+              <span class="zoom-icon">🔍</span>
+              <p class="gallery-photo-caption"><%= photo.caption %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </section>
+
+      <!-- CUSTOM QUOTE BOX -->
+      <div class="hub-cta-box" style="margin-top: 60px;">
+        <h2>Ready to Book Your Ride?</h2>
+        <p>Get instant confirmation with transparent, all-inclusive pricing. Customized rental packages available for corporate events, outstation travel, and luxury weddings.</p>
+        <div class="hub-cta-btns">
+          <a href="tel:+919785307799" class="btn-seo-primary">📞 Call Reservations</a>
+          <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours!%20I%20want%20to%20book%20a%20vehicle%20from%20your%20fleet." class="btn-seo-outline" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- WHY US SECTION -->
+      <section class="hub-credentials" style="margin-top: 60px;">
+        <h2>The Rajasthali Quality Standard</h2>
+        <div class="credentials-grid">
+          <div class="credential-item">
+            <strong>Deeply Sanitized Vehicles</strong>
+            <p>Every vehicle in our fleet is completely washed, vacuumed, and sanitized before it arrives at your doorstep.</p>
+          </div>
+          <div class="credential-item">
+            <strong>Professional Chauffeurs</strong>
+            <p>Our drivers are highly experienced, police-verified, courteous, and experts on Rajasthan & North India routes.</p>
+          </div>
+          <div class="credential-item">
+            <strong>Transparent Billing</strong>
+            <p>100% transparent quotes. No hidden tolls, state tax surprises, or driver allowance disputes.</p>
+          </div>
+          <div class="credential-item">
+            <strong>GPS Live Monitoring</strong>
+            <p>All cars, SUVs, and coaches are equipped with active GPS tracking for safety, timing, and security.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div id="galleryLightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" onclick="event.stopPropagation()">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+    <span class="lightbox-prev" onclick="changeSlide(-1); event.stopPropagation()">&#10094;</span>
+    <span class="lightbox-next" onclick="changeSlide(1); event.stopPropagation()">&#10095;</span>
+  </div>
+
+  <%- include('partials/seo-footer') %>
+
+  <!-- LIGHTBOX AND FILTER JS -->
+  <script>
+    // Tab filtering logic
+    const filterBtns = document.querySelectorAll('.fleet-tab-btn');
+    const catalogCards = document.querySelectorAll('.fleet-catalog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active tab class
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        catalogCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'flex';
+          } else {
+            const cardCategory = card.getAttribute('data-category');
+            if (cardCategory === filterValue) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Lightbox Gallery Logic
+    const photos = <%- JSON.stringify(actionPhotos) %>;
+    let currentPhotoIdx = 0;
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function openLightbox(index) {
+      currentPhotoIdx = index;
+      lightbox.style.display = 'flex';
+      updateLightboxContent();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent() {
+      const currentPhoto = photos[currentPhotoIdx];
+      lightboxImg.src = currentPhoto.path;
+      lightboxCaption.innerText = currentPhoto.caption;
+    }
+
+    function changeSlide(direction) {
+      currentPhotoIdx += direction;
+      if (currentPhotoIdx >= photos.length) {
+        currentPhotoIdx = 0;
+      } else if (currentPhotoIdx < 0) {
+        currentPhotoIdx = photos.length - 1;
+      }
+      updateLightboxContent();
+    }
+
+    // Keyboard support for Lightbox
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+      }
+    });
+  </script>
+
+</body>
+</html>

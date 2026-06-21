@@ -3,6 +3,7 @@ const path = require('path');
 const destinations = require('./data/destinations');
 const services = require('./data/services');
 const tourPackages = require('./data/tourPackages');
+const { vehicles, actionPhotos } = require('./data/fleet');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -44,6 +45,14 @@ app.get('/tours/:slug', (req, res) => {
 
   res.set('Cache-Control', 'public, max-age=86400');
   res.render('destination', { dest, relatedDests });
+});
+
+/* =========================================
+   FLEET — GALLERY / ALL VEHICLES PAGE
+========================================= */
+app.get('/fleet', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('fleet', { vehicles, actionPhotos, destinations });
 });
 
 /* =========================================
@@ -134,6 +143,7 @@ app.get('/sitemap.xml', (req, res) => {
     { loc: `${BASE_URL}/`, changefreq: 'weekly', priority: '1.0', lastmod: today },
     { loc: `${BASE_URL}/tours`, changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: `${BASE_URL}/services`, changefreq: 'weekly', priority: '0.9', lastmod: today },
+    { loc: `${BASE_URL}/fleet`, changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: `${BASE_URL}/tour-packages`, changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: `${BASE_URL}/taxi-from-jaipur`, changefreq: 'monthly', priority: '0.85', lastmod: today },
     { loc: `${BASE_URL}/outstation-cab-jaipur`, changefreq: 'monthly', priority: '0.85', lastmod: today },
