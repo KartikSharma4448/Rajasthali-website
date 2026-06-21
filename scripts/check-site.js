@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const app = require('../server');
+const { site } = require('../lib/seo');
 
 const root = path.join(__dirname, '..');
 const coreRoutes = [
@@ -58,7 +59,7 @@ function checkHtml(route, html) {
 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
   assert(canonical, `${route} missing canonical href`);
-  assert(canonical[1].startsWith('https://rajasthalitours.com'), `${route} canonical must use production domain`);
+  assert(canonical[1].startsWith(site.url), `${route} canonical must use ${site.url}`);
 
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   assert(jsonLdBlocks.length > 0, `${route} missing JSON-LD`);
@@ -140,7 +141,7 @@ async function checkRobots(base) {
   const response = await fetch(`${base}/robots.txt`);
   assert(response.ok, 'robots.txt failed');
   const text = await response.text();
-  assert(text.includes('Sitemap: https://rajasthalitours.com/sitemap.xml'), 'robots.txt missing sitemap');
+  assert(text.includes(`Sitemap: ${site.url}/sitemap.xml`), 'robots.txt missing sitemap');
   assert(!text.includes('sitemap-news.xml'), 'robots.txt should not reference sitemap-news.xml');
 }
 
@@ -149,7 +150,7 @@ async function checkSitemap(base) {
   assert(response.ok, 'sitemap.xml failed');
   const text = await response.text();
   assert(text.includes('<urlset'), 'sitemap missing urlset');
-  assert(text.includes('https://rajasthalitours.com/taxi-from-jaipur'), 'sitemap missing taxi page');
+  assert(text.includes(`${site.url}/taxi-from-jaipur`), 'sitemap missing taxi page');
   assert(!text.includes('/outstation-cab-jaipur'), 'sitemap should not include redirected outstation page');
   assert(!text.includes('/car-rental-jaipur'), 'sitemap should not include redirected car rental page');
 }
