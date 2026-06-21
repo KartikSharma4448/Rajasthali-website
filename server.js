@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the Server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`==================================================`);
   console.log(`  Rajasthali Tours Web Application is Running!   `);
   console.log(`  Local URL: http://localhost:${PORT}             `);
