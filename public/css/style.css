@@ -1214,35 +1214,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-grow: 1;
 }
 
-.service-arrow {
-  margin-top: var(--space-md);
-  align-self: flex-start;
-  width: 30px;
-  height: 30px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.4);
-  transition: all var(--duration-normal) var(--ease-out);
-  position: relative;
-  z-index: 2;
-}
-
-.service-card:hover .service-arrow {
-  color: var(--white);
-  border-color: var(--brand-pink);
-  background: var(--brand-pink);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-brand);
-}
-
-.service-arrow svg {
-  width: 12px;
-  height: 12px;
-}
-
 /* Service Bento Grid Styles */
 .service-card.wide {
   grid-column: span 2;
@@ -1262,11 +1233,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .service-card.wide .service-icon {
   margin-bottom: 0;
-}
-
-.service-card.wide .service-arrow {
-  margin-top: 0;
-  align-self: center;
 }
 
 /* ============================================
@@ -2484,7 +2450,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     gap: 1rem !important;
   }
   .service-card.wide .service-icon { margin-bottom: 0.5rem !important; }
-  .service-card.wide .service-arrow { margin-top: 0.75rem !important; align-self: flex-start !important; }
 
   /* Fleet */
   .fleet-grid { grid-template-columns: 1fr; }
