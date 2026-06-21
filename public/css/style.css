@@ -1186,9 +1186,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 64px;
   min-width: 64px;
   min-height: 64px;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1200,24 +1200,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .service-card:hover .service-icon {
-  background: var(--gradient-brand);
+  background: transparent;
   border-color: transparent;
-  box-shadow: var(--shadow-brand);
-  transform: scale(1.08);
+  box-shadow: none;
+  transform: scale(1.1);
 }
 
 .service-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 36px;
+  height: 36px;
   color: var(--brand-pink);
   flex-shrink: 0;
   display: block;
   transition: all var(--duration-normal) var(--ease-out);
+  filter: drop-shadow(0 4px 12px rgba(233, 30, 140, 0.3));
 }
 
 .service-card:hover .service-icon svg {
-  color: var(--white);
-  transform: translateY(-2px);
+  color: var(--brand-pink-light);
+  transform: translateY(-4px);
+  filter: drop-shadow(0 8px 20px rgba(233, 30, 140, 0.5));
+}
+
+.service-card:hover .service-icon svg {
+  color: var(--brand-pink-light);
+  transform: translateY(-4px);
+  filter: drop-shadow(0 8px 20px rgba(233, 30, 140, 0.5));
 }
 
 .service-content {
