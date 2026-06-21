@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= pkg.metaTitle %></title>
+  <meta name="description" content="<%= pkg.metaDescription %>">
+  <meta name="keywords" content="<%= pkg.keywords.join(', ') %>">
+  <link rel="canonical" href="https://rajasthalitours.com/tour-packages/<%= pkg.slug %>">
+  <meta property="og:title" content="<%= pkg.metaTitle %>">
+  <meta property="og:description" content="<%= pkg.metaDescription %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/tour-packages/<%= pkg.slug %>">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tour Packages", "item": "https://rajasthalitours.com/tour-packages" },
+      { "@type": "ListItem", "position": 3, "name": "<%= pkg.name %>", "item": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "<%= pkg.name %>",
+    "description": "<%= pkg.metaDescription %>",
+    "url": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>",
+    "touristType": "Heritage travellers, Cultural tourists, Pilgrims, International visitors",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Rajasthali Tours & Travels Pvt. Ltd.",
+      "url": "https://rajasthalitours.com",
+      "telephone": "+919785307799"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      <% pkg.faqs.forEach(function(faq, i) { %>
+      {
+        "@type": "Question",
+        "name": "<%= faq.q.replace(/"/g, '&quot;') %>",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<%= faq.a.replace(/"/g, '&quot;') %>"
+        }
+      }<%= i < pkg.faqs.length - 1 ? ',' : '' %>
+      <% }); %>
+    ]
+  }
+  </script>
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="background: linear-gradient(135deg, #0a0a0f 0%, #1a0510 50%, #0a0a0f 100%);">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/tour-packages">Tour Packages</a><span>›</span>
+        <span><%= pkg.name %></span>
+      </nav>
+
+      <div class="seo-badge"><%= pkg.badge %> · <%= pkg.type %></div>
+      <h1 class="seo-hero-title"><%= pkg.name %></h1>
+      <p class="seo-hero-sub" style="font-size:1.15rem; color: var(--brand-gold)"><%= pkg.subtitle %></p>
+      <p class="seo-hero-sub">🗓️ <strong><%= pkg.duration %></strong> &nbsp;|&nbsp; Starting from <strong><%= pkg.pricing && pkg.pricing[0] ? pkg.pricing[0].price : 'Call for quote' %></strong></p>
+
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 Book This Package</a>
+        <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20package." target="_blank" class="seo-cta-secondary">💬 WhatsApp Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #0f0f1a;">
+    <div class="seo-container seo-two-col">
+
+      <div class="seo-main-col">
+
+        <div class="seo-card">
+          <h2>About This Tour</h2>
+          <p><%= pkg.description %></p>
+        </div>
+
+        <div class="seo-card">
+          <h2>Tour Highlights</h2>
+          <ul class="seo-highlights-list">
+            <% pkg.highlights.forEach(function(h) { %>
+            <li>✓ <%= h %></li>
+            <% }); %>
+          </ul>
+        </div>
+
+        <div class="seo-card">
+          <h2>Day-by-Day Itinerary</h2>
+          <div class="itinerary-list">
+            <% pkg.itinerary.forEach(function(day) { %>
+            <div class="itinerary-day">
+              <div class="itinerary-day-label"><%= day.day %></div>
+              <div class="itinerary-day-body">
+                <h4><%= day.title %></h4>
+                <ul>
+                  <% day.activities.forEach(function(act) { %>
+                  <li><%= act %></li>
+                  <% }); %>
+                </ul>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+
+        <div class="seo-card">
+          <h2>What's Included</h2>
+          <ul class="seo-includes-list">
+            <% pkg.inclusions.forEach(function(inc) { %>
+            <li>✓ <%= inc %></li>
+            <% }); %>
+          </ul>
+        </div>
+
+        <div class="seo-card">
+          <h2>Frequently Asked Questions</h2>
+          <div class="seo-faqs">
+            <% pkg.faqs.forEach(function(faq) { %>
+            <div class="seo-faq">
+              <h3><%= faq.q %></h3>
+              <p><%= faq.a %></p>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="seo-side-col">
+
+        <div class="seo-sticky-card">
+          <h3>Book This Package</h3>
+          <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 1rem;">Call or WhatsApp us for pricing and availability. Packages are fully customisable.</p>
+
+          <% if (pkg.pricing && pkg.pricing.length) { %>
+          <div class="pkg-price-table">
+            <% pkg.pricing.forEach(function(p) { %>
+            <div class="pkg-price-row">
+              <span><%= p.pax %> · <%= p.vehicle %></span>
+              <strong><%= p.price %></strong>
+            </div>
+            <% }); %>
+          </div>
+          <% } %>
+
+          <a href="tel:+919785307799" class="seo-cta-primary" style="display:block; text-align:center; margin-top:1rem;">📞 +91 97853 07799</a>
+          <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>." target="_blank" class="seo-cta-secondary" style="display:block; text-align:center; margin-top:0.75rem;">💬 WhatsApp Us</a>
+          <a href="mailto:reservation@rajasthalitours.com" class="seo-cta-secondary" style="display:block; text-align:center; margin-top:0.75rem;">✉️ Email Enquiry</a>
+
+          <div class="seo-trust-row" style="margin-top: 1.5rem;">
+            <span>🏛️ Govt. Approved</span>
+            <span>✈️ IATA Certified</span>
+            <span>⭐ 4.8/5 Rating</span>
+          </div>
+        </div>
+
+        <% if (relatedPkgs.length) { %>
+        <div class="seo-sticky-card" style="margin-top: 1.5rem;">
+          <h3>Other Packages</h3>
+          <% relatedPkgs.forEach(function(rp) { %>
+          <a href="/tour-packages/<%= rp.slug %>" class="seo-related-link">
+            <strong><%= rp.name %></strong>
+            <span><%= rp.duration %></span>
+          </a>
+          <% }); %>
+        </div>
+        <% } %>
+
+      </aside>
+    </div>
+  </section>
+
+  <section class="seo-cta-section">
+    <div class="seo-container">
+      <h2>Customise This Package</h2>
+      <p>Every itinerary can be modified — add cities, change hotels, extend duration, upgrade vehicles. Call us for a tailored quote.</p>
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 +91 97853 07799</a>
+        <a href="/tour-packages" class="seo-cta-secondary">← All Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/seo-footer') %>
+</body>
+</html>

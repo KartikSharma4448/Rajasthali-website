@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const destinations = require('./data/destinations');
 const services = require('./data/services');
+const tourPackages = require('./data/tourPackages');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
 ========================================= */
 app.get('/tours', (req, res) => {
   res.set('Cache-Control', 'public, max-age=86400');
-  res.render('tours-hub', { destinations });
+  res.render('tours-hub', { destinations, tourPackages });
 });
 
 /* =========================================
@@ -69,7 +70,62 @@ app.get('/services/:slug', (req, res) => {
 });
 
 /* =========================================
-   SITEMAP.XML — Dynamic
+   TOUR PACKAGES — HUB
+========================================= */
+app.get('/tour-packages', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('tour-packages-hub', { tourPackages, destinations });
+});
+
+/* =========================================
+   TOUR PACKAGES — INDIVIDUAL
+========================================= */
+app.get('/tour-packages/:slug', (req, res) => {
+  const pkg = tourPackages.find(p => p.slug === req.params.slug);
+  if (!pkg) return res.status(404).send('Tour package not found');
+
+  const relatedPkgs = tourPackages.filter(p => p.slug !== pkg.slug).slice(0, 3);
+
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('tour-package', { pkg, relatedPkgs });
+});
+
+/* =========================================
+   SEO LANDING PAGES — HIGH TRAFFIC KEYWORDS
+========================================= */
+app.get('/taxi-from-jaipur', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('taxi-jaipur', { destinations });
+});
+
+app.get('/outstation-cab-jaipur', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('taxi-jaipur', { destinations });
+});
+
+app.get('/car-rental-jaipur', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.render('taxi-jaipur', { destinations });
+});
+
+/* =========================================
+   ROBOTS.TXT
+========================================= */
+app.get('/robots.txt', (req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.send(`User-agent: *
+Allow: /
+
+Sitemap: ${BASE_URL}/sitemap.xml
+Sitemap: ${BASE_URL}/sitemap-news.xml
+
+Disallow: /admin
+Disallow: /*.json$
+`);
+});
+
+/* =========================================
+   SITEMAP.XML — Dynamic, comprehensive
 ========================================= */
 app.get('/sitemap.xml', (req, res) => {
   const today = new Date().toISOString().split('T')[0];
@@ -78,6 +134,10 @@ app.get('/sitemap.xml', (req, res) => {
     { loc: `${BASE_URL}/`, changefreq: 'weekly', priority: '1.0', lastmod: today },
     { loc: `${BASE_URL}/tours`, changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: `${BASE_URL}/services`, changefreq: 'weekly', priority: '0.9', lastmod: today },
+    { loc: `${BASE_URL}/tour-packages`, changefreq: 'weekly', priority: '0.9', lastmod: today },
+    { loc: `${BASE_URL}/taxi-from-jaipur`, changefreq: 'monthly', priority: '0.85', lastmod: today },
+    { loc: `${BASE_URL}/outstation-cab-jaipur`, changefreq: 'monthly', priority: '0.85', lastmod: today },
+    { loc: `${BASE_URL}/car-rental-jaipur`, changefreq: 'monthly', priority: '0.85', lastmod: today },
   ];
 
   const destUrls = destinations.map(d => ({
@@ -94,7 +154,14 @@ app.get('/sitemap.xml', (req, res) => {
     lastmod: today
   }));
 
-  const allUrls = [...staticUrls, ...destUrls, ...serviceUrls];
+  const packageUrls = tourPackages.map(p => ({
+    loc: `${BASE_URL}/tour-packages/${p.slug}`,
+    changefreq: 'monthly',
+    priority: '0.85',
+    lastmod: today
+  }));
+
+  const allUrls = [...staticUrls, ...destUrls, ...serviceUrls, ...packageUrls];
 
   const xmlItems = allUrls.map(u => `
   <url>
@@ -105,7 +172,10 @@ app.get('/sitemap.xml', (req, res) => {
   </url>`).join('');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${xmlItems}
 </urlset>`;
 
@@ -121,6 +191,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`==================================================`);
   console.log(`  Rajasthali Tours Web Application is Running!   `);
   console.log(`  Local URL: http://localhost:${PORT}             `);
-  console.log(`  SEO Pages: /tours, /services, /sitemap.xml     `);
+  console.log(`  SEO Pages: /tours, /services, /tour-packages    `);
+  console.log(`  Destinations: ${destinations.length} | Packages: ${tourPackages.length}`);
   console.log(`==================================================`);
 });

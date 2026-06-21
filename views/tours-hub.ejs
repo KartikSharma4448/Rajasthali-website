@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajasthan Tour Destinations from Jaipur | Rajasthali Tours & Travels</title>
-  <meta name="description" content="Explore all Rajasthan tour destinations from Jaipur with Rajasthali Tours. Udaipur, Jodhpur, Jaisalmer, Agra, Pushkar, Bikaner & more. Govt-approved luxury transport since 2010.">
-  <meta name="keywords" content="Rajasthan tour destinations, Jaipur to Udaipur, Jaipur to Jodhpur, Jaipur to Jaisalmer, Jaipur to Agra, Rajasthan travel, luxury cab Jaipur">
+  <title>Tour Destinations from Jaipur — Rajasthan & All India | Rajasthali Tours</title>
+  <meta name="description" content="Book taxi or tour to 30+ destinations from Jaipur — Udaipur, Jodhpur, Jaisalmer, Agra (Taj Mahal), Delhi, Haridwar, Shimla, Manali, Amritsar, Varanasi & more. Govt-approved. ₹1,600 onwards.">
+  <meta name="keywords" content="tour destinations from Jaipur, Jaipur taxi all destinations, Rajasthan tour, India tour from Jaipur, Jaipur to Udaipur, Jaipur to Agra, Jaipur to Delhi, Jaipur to Shimla, Jaipur to Haridwar, Jaipur to Amritsar, Rajasthali Tours">
   <link rel="canonical" href="https://rajasthalitours.com/tours">
-  <meta property="og:title" content="Rajasthan Tour Destinations | Rajasthali Tours & Travels">
-  <meta property="og:description" content="Luxury transport to all major Rajasthan destinations from Jaipur. 500+ vehicles, professional chauffeurs, and 15+ years of experience.">
+  <meta property="og:title" content="Tour Destinations from Jaipur — Rajasthan & All India | Rajasthali Tours">
+  <meta property="og:description" content="30+ tour destinations from Jaipur across Rajasthan and India. Luxury taxi, cab, and tour packages. 500+ vehicles, govt-approved.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rajasthalitours.com/tours">
   <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/seo-pages.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,8 +33,8 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Rajasthan Tour Destinations from Jaipur",
-    "description": "Popular travel destinations covered by Rajasthali Tours & Travels from Jaipur",
+    "name": "Tour Destinations from Jaipur — Rajasthan & All India",
+    "description": "30+ travel destinations covered by Rajasthali Tours & Travels from Jaipur, Rajasthan",
     "itemListElement": [
       <% destinations.forEach(function(d, i) { %>
       {
@@ -58,87 +59,182 @@
         <span>›</span>
         <span>Tour Destinations</span>
       </nav>
-      <div class="seo-hero-badge">Government Approved Tour Operator</div>
-      <h1>Rajasthan Tour Destinations<br><span style="color: var(--brand-pink);">from Jaipur</span></h1>
-      <p class="seo-hero-sub">Luxury transport to <strong><%= destinations.length %> major destinations</strong> across Rajasthan and beyond — with professional chauffeurs, 500+ premium vehicles, and 15+ years of road expertise.</p>
+
+      <div class="seo-badge">GOVERNMENT APPROVED TOUR OPERATOR</div>
+      <h1 class="seo-hero-title">
+        Tour Destinations <span class="seo-highlight">from Jaipur</span>
+      </h1>
+      <p class="seo-hero-sub">
+        Luxury transport to <strong><%= destinations.length %>+ destinations</strong> across Rajasthan and India — with professional chauffeurs, 500+ premium vehicles, and 15+ years of road expertise.
+      </p>
+
       <div class="seo-hero-stats">
-        <div><strong><%= destinations.length %>+</strong><span>Destinations</span></div>
-        <div><strong>500+</strong><span>Vehicles</span></div>
-        <div><strong>15+</strong><span>Years Service</span></div>
-        <div><strong>10K+</strong><span>Happy Customers</span></div>
+        <div class="seo-stat"><span class="seo-stat-num"><%= destinations.length %>+</span><span class="seo-stat-label">Destinations</span></div>
+        <div class="seo-stat"><span class="seo-stat-num">500+</span><span class="seo-stat-label">Vehicles</span></div>
+        <div class="seo-stat"><span class="seo-stat-num">15+</span><span class="seo-stat-label">Years Service</span></div>
+        <div class="seo-stat"><span class="seo-stat-num">10K+</span><span class="seo-stat-label">Happy Customers</span></div>
+      </div>
+
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 Book a Taxi</a>
+        <a href="/tour-packages" class="seo-cta-secondary">🗺️ View Tour Packages</a>
       </div>
     </div>
   </section>
 
-  <main class="seo-main">
+  <%
+    const rajasthanDests = destinations.filter(d => d.region === 'Rajasthan');
+    const panIndiaDests = destinations.filter(d => d.region !== 'Rajasthan');
+  %>
+
+  <section class="seo-section" style="background: #0f0f1a;">
     <div class="seo-container">
+      <h2 class="seo-section-title">🏜️ Rajasthan Destinations</h2>
+      <p class="seo-section-sub">Covering all major cities and hidden gems of the Land of Kings — from the Pink City to the Golden Desert.</p>
 
-      <div class="hub-intro">
-        <h2>Choose Your Destination</h2>
-        <p>Every route below links to a detailed page with distances, attractions, recommended vehicles, and FAQs specific to that destination — based on 15 years of operating these roads.</p>
-      </div>
-
-      <div class="destinations-grid">
-        <% destinations.forEach(function(dest) { %>
-        <a href="/tours/<%= dest.slug %>" class="dest-card">
+      <div class="dest-grid">
+        <% rajasthanDests.forEach(function(d) { %>
+        <article class="dest-card">
           <div class="dest-card-header">
-            <div class="dest-distance"><%= dest.distance %> km</div>
-            <div class="dest-drive"><%= dest.driveTime %></div>
+            <h3><%= d.name %></h3>
+            <p class="dest-nickname"><%= d.nickname %></p>
           </div>
-          <h3 class="dest-card-name"><%= dest.name %></h3>
-          <div class="dest-card-nick"><%= dest.nickname %></div>
-          <p class="dest-card-desc"><%= dest.description.substring(0, 140) %>…</p>
-          <div class="dest-card-highlights">
-            <% dest.topAttractions.slice(0, 3).forEach(function(attr) { %>
-            <span class="dest-tag"><%= attr.name %></span>
-            <% }); %>
+          <div class="dest-card-body">
+            <div class="dest-meta">
+              <span>📍 <%= d.distance %> km</span>
+              <span>⏱️ <%= d.driveTime %></span>
+            </div>
+            <p class="dest-desc"><%= d.description.substring(0, 120) %>...</p>
+            <div class="dest-highlights">
+              <% d.topAttractions.slice(0, 2).forEach(function(a) { %>
+              <span class="dest-tag-sm">✓ <%= a.name %></span>
+              <% }); %>
+            </div>
           </div>
-          <div class="dest-card-cta">
-            Explore Route →
+          <div class="dest-card-footer">
+            <a href="/tours/<%= d.slug %>" class="dest-link-btn">View Details & Book →</a>
           </div>
-        </a>
+        </article>
         <% }); %>
       </div>
-
-      <div class="hub-cta-box">
-        <h2>Can't Find Your Destination?</h2>
-        <p>We cover 50+ cities across India. Call our reservations team for a custom quote on any route — available 24/7.</p>
-        <div class="hub-cta-btns">
-          <a href="tel:+919785307799" class="btn-seo-primary">📞 +91 97853 07799</a>
-          <a href="https://wa.me/919785307799?text=Hello%20Rajasthali%20Tours!%20I%20need%20a%20tour%20quote." class="btn-seo-outline" target="_blank">WhatsApp Us</a>
-        </div>
-      </div>
-
-      <section class="hub-why">
-        <h2>Why Book With Rajasthali Tours?</h2>
-        <div class="hub-why-grid">
-          <div class="hub-why-card">
-            <div class="hub-why-icon">🏛️</div>
-            <h3>Government Approved</h3>
-            <p>Ministry of Tourism certified tour operator. IATA and ITTA member since 2010.</p>
-          </div>
-          <div class="hub-why-card">
-            <div class="hub-why-icon">🚗</div>
-            <h3>500+ Premium Vehicles</h3>
-            <p>Economy sedans to ultra-luxury SUVs and full-size AC coaches — right vehicle for every group.</p>
-          </div>
-          <div class="hub-why-card">
-            <div class="hub-why-icon">👨‍✈️</div>
-            <h3>Trained Chauffeurs</h3>
-            <p>Police-verified drivers with route expertise; English-speaking available for international guests.</p>
-          </div>
-          <div class="hub-why-card">
-            <div class="hub-why-icon">📞</div>
-            <h3>24/7 Support</h3>
-            <p>Direct helpline and WhatsApp — reachable round the clock for any requirement on the road.</p>
-          </div>
-        </div>
-      </section>
-
     </div>
-  </main>
+  </section>
+
+  <section class="seo-section" style="background: #080810;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">🇮🇳 Pan-India Destinations</h2>
+      <p class="seo-section-sub">From the spiritual ghats of Varanasi to the snow peaks of Manali — Rajasthali Tours covers all of India from Jaipur.</p>
+
+      <div class="dest-grid">
+        <% panIndiaDests.forEach(function(d) { %>
+        <article class="dest-card">
+          <div class="dest-card-header">
+            <h3><%= d.name %></h3>
+            <p class="dest-nickname"><%= d.nickname %> &nbsp;·&nbsp; <span class="dest-region"><%= d.region %></span></p>
+          </div>
+          <div class="dest-card-body">
+            <div class="dest-meta">
+              <span>📍 <%= d.distance %> km</span>
+              <span>⏱️ <%= d.driveTime %></span>
+            </div>
+            <p class="dest-desc"><%= d.description.substring(0, 120) %>...</p>
+            <div class="dest-highlights">
+              <% d.topAttractions.slice(0, 2).forEach(function(a) { %>
+              <span class="dest-tag-sm">✓ <%= a.name %></span>
+              <% }); %>
+            </div>
+          </div>
+          <div class="dest-card-footer">
+            <a href="/tours/<%= d.slug %>" class="dest-link-btn">View Details & Book →</a>
+          </div>
+        </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #0f0f1a;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">Popular Tour Packages</h2>
+      <p class="seo-section-sub">Looking for a complete holiday? Browse our curated multi-day tour circuits.</p>
+      <div class="pkg-cta-grid">
+        <a href="/tour-packages/golden-triangle-tour" class="pkg-cta-card">
+          <strong>Golden Triangle</strong>
+          <span>Delhi – Agra – Jaipur · 4 Days</span>
+        </a>
+        <a href="/tour-packages/royal-rajasthan-circuit" class="pkg-cta-card">
+          <strong>Royal Rajasthan Circuit</strong>
+          <span>Jaipur – Jodhpur – Jaisalmer – Udaipur · 8 Days</span>
+        </a>
+        <a href="/tour-packages/char-dham-yatra" class="pkg-cta-card">
+          <strong>Char Dham Yatra</strong>
+          <span>Kedarnath – Badrinath – Gangotri – Yamunotri · 12 Days</span>
+        </a>
+        <a href="/tour-packages/rajasthan-desert-safari" class="pkg-cta-card">
+          <strong>Rajasthan Desert Safari</strong>
+          <span>Bikaner – Jaisalmer – Jodhpur · 6 Days</span>
+        </a>
+        <a href="/tour-packages/golden-triangle-with-rajasthan" class="pkg-cta-card">
+          <strong>Golden Triangle + Rajasthan</strong>
+          <span>Delhi – Agra – Jaipur – Udaipur · 10 Days</span>
+        </a>
+        <a href="/tour-packages" class="pkg-cta-card" style="border-color: var(--brand-pink);">
+          <strong>All Tour Packages →</strong>
+          <span><%= tourPackages.length %> curated circuits available</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #080810;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">Quick Route Fares</h2>
+      <p class="seo-section-sub">Transparent, all-inclusive fares from Jaipur. No hidden charges. All tolls, fuel, and driver included.</p>
+      <div class="fare-table-wrap">
+        <table class="fare-table">
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Distance</th>
+              <th>Drive Time</th>
+              <th>Sedan (₹)</th>
+              <th>Innova Crysta (₹)</th>
+              <th>Fortuner (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% destinations.slice(0, 16).forEach(function(d) {
+              const sedan = Math.round(d.distance * 11 / 100) * 100;
+              const innova = Math.round(d.distance * 16 / 100) * 100;
+              const fortuner = Math.round(d.distance * 22 / 100) * 100;
+            %>
+            <tr>
+              <td><a href="/tours/<%= d.slug %>"><%= d.name %></a></td>
+              <td><%= d.distance %> km</td>
+              <td><%= d.driveTime %></td>
+              <td>₹<%= sedan.toLocaleString() %></td>
+              <td>₹<%= innova.toLocaleString() %></td>
+              <td>₹<%= fortuner.toLocaleString() %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align: center; margin-top: 1rem; color: #aaa; font-size: 0.85rem;">* Indicative fares. Exact prices vary by season and availability. <a href="tel:+919785307799" style="color: var(--brand-pink);">Call for exact quote →</a></p>
+    </div>
+  </section>
+
+  <section class="seo-cta-section">
+    <div class="seo-container">
+      <h2>Ready to Travel? Book Your Jaipur Taxi Now</h2>
+      <p>Call or WhatsApp — we'll confirm your cab in under 30 minutes with a fixed, all-inclusive price.</p>
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 +91 97853 07799</a>
+        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="seo-cta-secondary">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
   <%- include('partials/seo-footer') %>
-
 </body>
 </html>

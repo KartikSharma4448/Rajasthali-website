@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages from Jaipur — Rajasthan, India & Spiritual Tours | Rajasthali Tours</title>
+  <meta name="description" content="Explore curated tour packages from Jaipur — Golden Triangle, Royal Rajasthan Circuit, Char Dham Yatra, Desert Safari, and more. Govt-approved, IATA-certified. 15+ years of experience. Book now.">
+  <meta name="keywords" content="tour packages from Jaipur, Rajasthan tour packages, Golden Triangle tour, Char Dham yatra, India tour package, Rajasthan holiday package, rajasthali tours packages">
+  <link rel="canonical" href="https://rajasthalitours.com/tour-packages">
+  <meta property="og:title" content="Tour Packages from Jaipur | Rajasthali Tours & Travels">
+  <meta property="og:description" content="Golden Triangle, Royal Rajasthan, Char Dham Yatra, Desert Safari & more. Govt-approved luxury tours from Jaipur since 2010.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/tour-packages">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tour Packages from Jaipur | Rajasthali Tours">
+  <meta name="twitter:description" content="Rajasthan circuits, Golden Triangle, Char Dham Yatra & hill station packages from Jaipur.">
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tour Packages", "item": "https://rajasthalitours.com/tour-packages" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Rajasthali Tours & Travels Pvt. Ltd.",
+    "url": "https://rajasthalitours.com",
+    "telephone": "+919785307799",
+    "email": "reservation@rajasthalitours.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "43, Shopping Complex, Ambabari",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "302039",
+      "addressCountry": "IN"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "India Tour Packages",
+      "itemListElement": [
+        <% tourPackages.forEach(function(pkg, i) { %>
+        {
+          "@type": "Offer",
+          "name": "<%= pkg.name %>",
+          "description": "<%= pkg.metaDescription %>",
+          "url": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>"
+        }<%= i < tourPackages.length - 1 ? ',' : '' %>
+        <% }); %>
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Tour Packages from Jaipur",
+    "itemListElement": [
+      <% tourPackages.forEach(function(pkg, i) { %>
+      {
+        "@type": "ListItem",
+        "position": <%= i + 1 %>,
+        "name": "<%= pkg.name %>",
+        "url": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>"
+      }<%= i < tourPackages.length - 1 ? ',' : '' %>
+      <% }); %>
+    ]
+  }
+  </script>
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="background: linear-gradient(135deg, #0a0a0f 0%, #200a10 50%, #0a0a0f 100%);">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Tour Packages</span>
+      </nav>
+
+      <div class="seo-badge">GOVT. APPROVED · IATA CERTIFIED · SINCE 2010</div>
+      <h1 class="seo-hero-title">
+        Tour Packages from <span class="seo-highlight">Jaipur</span>
+      </h1>
+      <p class="seo-hero-sub">
+        From India's most iconic <strong>Golden Triangle</strong> to the sacred <strong>Char Dham Yatra</strong>, Rajasthali Tours curates premium travel experiences across Rajasthan, North India, and the Himalayas — with luxury vehicles, certified chauffeurs, and end-to-end coordination.
+      </p>
+
+      <div class="seo-hero-stats">
+        <div class="seo-stat"><span class="seo-stat-num"><%= tourPackages.length %>+</span><span class="seo-stat-label">Tour Circuits</span></div>
+        <div class="seo-stat"><span class="seo-stat-num"><%= destinations.length %>+</span><span class="seo-stat-label">Destinations</span></div>
+        <div class="seo-stat"><span class="seo-stat-num">500+</span><span class="seo-stat-label">Luxury Vehicles</span></div>
+        <div class="seo-stat"><span class="seo-stat-num">15+</span><span class="seo-stat-label">Years Experience</span></div>
+      </div>
+
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 Call for Custom Package</a>
+        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20tour%20package." target="_blank" class="seo-cta-secondary">💬 WhatsApp Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #0f0f1a;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">All Tour Packages</h2>
+      <p class="seo-section-sub">Each package includes a luxury AC vehicle, professional English-speaking chauffeur, and 24/7 helpline — fully customisable to your requirements.</p>
+
+      <div class="pkg-grid">
+        <% tourPackages.forEach(function(pkg) { %>
+        <article class="pkg-card">
+          <div class="pkg-card-header">
+            <div class="pkg-badge"><%= pkg.badge %></div>
+            <div class="pkg-type"><%= pkg.type %></div>
+          </div>
+          <div class="pkg-card-body">
+            <h3><%= pkg.name %></h3>
+            <p class="pkg-subtitle"><%= pkg.subtitle %></p>
+            <p class="pkg-duration">🗓️ <%= pkg.duration %></p>
+            <p class="pkg-desc"><%= pkg.description.substring(0, 160) %>...</p>
+
+            <ul class="pkg-highlights">
+              <% pkg.highlights.slice(0, 4).forEach(function(h) { %>
+              <li>✓ <%= h %></li>
+              <% }); %>
+            </ul>
+
+            <% if (pkg.pricing && pkg.pricing.length) { %>
+            <div class="pkg-pricing">
+              <strong>Starting from: <%= pkg.pricing[0].price %></strong>
+            </div>
+            <% } %>
+          </div>
+          <div class="pkg-card-footer">
+            <a href="/tour-packages/<%= pkg.slug %>" class="pkg-detail-btn">View Full Package →</a>
+            <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20tour%20package." target="_blank" class="pkg-book-btn">Book on WhatsApp</a>
+          </div>
+        </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #080810;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">Why Book with Rajasthali Tours?</h2>
+      <div class="seo-grid-3">
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">🏛️</div>
+          <h3>Government Approved</h3>
+          <p>Licensed by the Government of Rajasthan Tourism Department and IATA-certified. One of the most trusted names in Indian tourism since 2010.</p>
+        </div>
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">🚗</div>
+          <h3>500+ Luxury Vehicles</h3>
+          <p>From economy sedans to Toyota Fortuners to 45-seater Volvo coaches — India's most comprehensive private vehicle fleet in Rajasthan.</p>
+        </div>
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">👨‍✈️</div>
+          <h3>Trained Chauffeurs</h3>
+          <p>All drivers are uniformed, verified, and trained in English communication, first aid, and route expertise for mountain and desert roads.</p>
+        </div>
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">📱</div>
+          <h3>24/7 Support</h3>
+          <p>A dedicated operations team is reachable around the clock via call and WhatsApp throughout your tour, from booking to final drop.</p>
+        </div>
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">💰</div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges. All tolls, fuel, parking, and driver night allowances are included in every quoted price. GST invoices provided.</p>
+        </div>
+        <div class="seo-feature-card">
+          <div class="seo-feature-icon">🔄</div>
+          <h3>Fully Customisable</h3>
+          <p>Every package can be tailored — extend, combine, change stopovers, upgrade vehicles. Call us for a quote built around your exact requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section" style="background: #0f0f1a;">
+    <div class="seo-container">
+      <h2 class="seo-section-title">Popular Destinations Covered</h2>
+      <p class="seo-section-sub">Our packages cover 30+ destinations across Rajasthan, North India, Uttarakhand, Himachal Pradesh, and Uttar Pradesh.</p>
+      <div class="dest-tags">
+        <% destinations.forEach(function(d) { %>
+        <a href="/tours/<%= d.slug %>" class="dest-tag"><%= d.name %></a>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-cta-section">
+    <div class="seo-container">
+      <h2>Ready to Plan Your Dream India Tour?</h2>
+      <p>Call our travel experts — we'll design a custom package for any budget, duration, and group size.</p>
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="seo-cta-primary">📞 +91 97853 07799</a>
+        <a href="mailto:reservation@rajasthalitours.com" class="seo-cta-secondary">✉️ Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/seo-footer') %>
+</body>
+</html>
