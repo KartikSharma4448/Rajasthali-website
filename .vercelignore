@@ -1,8 +1,7 @@
-# Raw/source images folder (not served — app uses public/rajasthalitours_images/)
+# Raw/source images folder (not served - app uses public/rajasthalitours_images/)
 rajasthalitours_images/
 
-# Dev tools & scripts (not needed at runtime)
-scripts/
+# Local-only tool folders
 .local/
 .agents/
 
