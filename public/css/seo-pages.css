@@ -970,6 +970,7 @@ details[open] .faq-question::after { content: '−'; }
 @media (max-width: 600px) {
   .dest-grid { grid-template-columns: 1fr; }
   .pkg-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
   .vehicle-grid { grid-template-columns: repeat(2, 1fr); }
   .pkg-cta-grid { grid-template-columns: 1fr; }
   .pkg-card-footer { flex-direction: column; }
