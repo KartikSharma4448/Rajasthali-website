@@ -406,32 +406,100 @@ app.use((err, req, res, next) => {
 function homeSeo() {
   return pageSeo({
     path: '/',
-    title: 'Rajasthali Tours & Travels Pvt. Ltd. | IATA Certified Tour Operator India — Rajasthan, Golden Triangle & Beyond',
-    description: "Rajasthali Tours & Travels Pvt. Ltd. — IATA-certified, Govt. of India approved premium transport & travel company. Serving Fortune 500 corporates, international tourists, NRI families and destination weddings since 2010. Luxury vehicles, professional chauffeurs, pan-India tours.",
+    title: 'Rajasthali Tours & Travels | Premier Pan-India Travel Company | IATA Certified Tour Operator Since 2010',
+    description: "Rajasthali Tours & Travels Pvt. Ltd. — Established 2010, IATA-certified, Govt. of India approved premier transport & travel company. Serving Fortune 500 corporates, international tourists, NRI families, and destination weddings across India and globally. 500+ luxury vehicles, professional chauffeurs, 15+ years excellence. Services: Corporate travel India-wide, luxury wedding transport, MICE events, airport transfers all major cities, coach rentals nationwide, curated tour packages — Rajasthan heritage, Golden Triangle, Char Dham Yatra, Kerala, Goa, Himalayas, Kashmir, Northeast, and international outbound tours.",
     keywords: [
-      // Brand
-      'Rajasthali Tours', 'Rajasthali Tours and Travels', 'Rajasthali Tours Jaipur',
-      // India-wide travel company
-      'travel company India', 'tour operator India', 'IATA certified travel company India',
-      'government approved tour operator India', 'luxury travel company India',
-      'best travel company India', 'private tour operator India',
-      // Rajasthan specific
-      'Rajasthan tour operator', 'Rajasthan travel company', 'Jaipur tour operator',
-      'luxury transport Jaipur', 'car rental Jaipur', 'taxi Jaipur',
-      // International / inbound
+      // Brand & Established Authority
+      'Rajasthali Tours', 'Rajasthali Tours and Travels', 'Rajasthali Tours India',
+      'Rajasthali Tours Jaipur', 'established travel company 2010',
+      
+      // Pan-India Travel Company - Core
+      'premier travel company India', 'luxury travel company India', 'best tour operator India',
+      'pan India travel company', 'all India tour operator', 'nationwide travel services India',
+      'India travel company', 'tour operator India', 'transport company India',
+      'Indian travel agency', 'India tour and travels', 'travel agency all over India',
+      
+      // IATA & Government Certifications (Trust Signals)
+      'IATA certified travel company India', 'IATA approved tour operator',
+      'government approved tour operator India', 'Ministry of Tourism approved India',
+      'government certified travel company', 'licensed tour operator India',
+      'authorized travel agent India', 'registered travel company India',
+      
+      // Corporate Travel - Pan-India
+      'corporate travel management India', 'corporate cab services India',
+      'business travel company India', 'corporate transport India nationwide',
+      'Fortune 500 travel partner India', 'employee transport India',
+      'corporate car rental India', 'executive transport services India',
+      
+      // International & Inbound Tourism
       'inbound tour operator India', 'India tour company for foreigners',
-      'India travel company international clients', 'Rajasthan tour international',
-      'India luxury travel', 'heritage India tours',
-      // Services
-      'wedding transport India', 'corporate cab India', 'MICE transport India',
-      'airport transfer India', 'coach rental India', 'bus rental Rajasthan',
-      // Certifications (trust signals)
-      'IATA certified Jaipur', 'Ministry of Tourism approved operator',
-      'government approved travel company Rajasthan'
+      'international tour operator India', 'India tours for international tourists',
+      'India luxury travel international clients', 'NRI travel services India',
+      'foreign tourist travel India', 'India travel packages international',
+      'inbound tourism India', 'India DMC destination management',
+      
+      // Wedding Transport - All India
+      'wedding transport India', 'destination wedding transport India',
+      'wedding car rental India', 'baraat transport India', 'shaadi car hire India',
+      'luxury wedding vehicles India', 'wedding coach India', 'wedding car decoration India',
+      
+      // MICE & Events - Nationwide
+      'MICE transport India', 'conference transport India', 'event transportation India',
+      'corporate event transport', 'meeting transport services India',
+      'exhibition transport India', 'incentive travel India',
+      
+      // Rajasthan Tours (Heritage Specialty)
+      'Rajasthan tour operator', 'Rajasthan tour packages', 'Rajasthan heritage tours',
+      'Jaipur tour operator', 'Rajasthan luxury tours', 'Rajasthan travel company',
+      'Jaipur Udaipur Jodhpur tour', 'Thar Desert tours', 'palace tours Rajasthan',
+      
+      // Golden Triangle & North India
+      'Golden Triangle tour India', 'Delhi Agra Jaipur tour', 'Golden Triangle package',
+      'North India tours', 'Delhi tour operator', 'Agra Taj Mahal tour',
+      
+      // Religious & Pilgrimage Tours - All India
+      'Char Dham Yatra tour', 'pilgrimage tours India', 'religious travel India',
+      'Varanasi tour package', 'Haridwar Rishikesh tour', 'Amritsar Golden Temple tour',
+      'Tirupati tour package', 'Hindu pilgrimage tours', 'spiritual tours India',
+      
+      // Popular Destinations - Pan-India Coverage
+      'Kerala tour packages', 'Goa tour operator', 'Kashmir tour packages',
+      'Himachal tour operator', 'Ladakh tours', 'Northeast India tours',
+      'Andaman tours', 'Uttarakhand tours', 'hill station tours India',
+      'beach tours India', 'backwater tours Kerala', 'houseboat Kerala',
+      
+      // Vehicle Rental - All India
+      'luxury car rental India', 'coach rental India', 'bus rental India',
+      'tempo traveller India', 'SUV rental India', 'Mercedes rental India',
+      'car hire India with driver', 'chauffeur driven cars India',
+      
+      // Airport Transfers - Major Cities
+      'airport transfer India', 'Delhi airport taxi', 'Mumbai airport cab',
+      'Bangalore airport transfer', 'Chennai airport taxi', 'Jaipur airport pickup',
+      'Hyderabad airport cab', 'Kolkata airport transfer',
+      
+      // City-wise Services
+      'taxi service Jaipur', 'car rental Delhi', 'tour operator Mumbai',
+      'cab service Bangalore', 'travel company Udaipur', 'car hire Agra',
+      
+      // International Outbound
+      'international tour packages India', 'outbound tour operator India',
+      'foreign tour packages', 'overseas travel company India',
+      'Europe tour from India', 'Dubai tour packages', 'Thailand tours India',
+      
+      // Service Quality & Features
+      '24/7 travel services India', 'luxury fleet India', 'professional chauffeurs India',
+      'reliable tour operator', 'experienced travel company', 'trusted travel partner India',
+      'customized tour packages India', 'group tours India', 'family tours India',
+      
+      // Long-tail Local Keywords
+      'best travel agency in India', 'top tour operators India',
+      'luxury travel services India', 'premium transport company India',
+      'heritage tours India', 'cultural tours India', 'adventure tours India'
     ],
-    ogTitle: 'Rajasthali Tours & Travels | IATA Certified India Tour Operator Since 2010',
-    ogDescription: "India's trusted IATA-certified travel company. Corporate travel, wedding transport, MICE events, Golden Triangle, Char Dham Yatra, Rajasthan circuits. 500+ luxury vehicles. International clients welcome.",
-    imageAlt: 'Rajasthali Tours — luxury travel fleet at Rajasthan heritage site',
+    ogTitle: 'Rajasthali Tours & Travels | Premier India Travel Company | IATA Certified Since 2010',
+    ogDescription: "India's trusted IATA-certified travel company with 15+ years excellence. Pan-India services: Corporate travel nationwide, destination weddings, MICE events, airport transfers all major cities, curated tours — Rajasthan heritage, Golden Triangle, Char Dham, Kerala, Goa, Himalayas, Kashmir. 500+ luxury vehicles. International clients welcome.",
+    imageAlt: 'Rajasthali Tours — Premier India luxury travel fleet serving corporate, wedding and tour clients nationwide',
     preloadImage: '/rajasthalitours_images/hero_rajasthan.png',
     schemas: [
       {
@@ -450,15 +518,17 @@ function homeSeo() {
         }
       },
       businessSchema(),
-      offerCatalogSchema('Travel Services', services.map(service => ({
+      offerCatalogSchema('Pan-India Travel Services', services.map(service => ({
         name: service.name,
         description: service.metaDescription,
         path: `/services/${service.slug}`
       }))),
       faqSchema([
-        { q: 'Is Rajasthali Tours government approved?', a: 'Yes. Rajasthali Tours & Travels Pvt. Ltd. is approved by the Ministry of Tourism, Government of India, and is IATA-certified, operating since 2010.' },
-        { q: 'What services does Rajasthali Tours offer?', a: 'We offer corporate travel, wedding transport, airport transfers, coach rentals, MICE event transport, and curated Rajasthan tour packages including the Golden Triangle and Char Dham Yatra.' },
-        { q: 'How do I book a cab or tour package with Rajasthali Tours?', a: 'Call or WhatsApp +91 97853 07799, or email reservation@rajasthalitours.com. We confirm bookings within 2 hours with a fixed quote.' }
+        { q: 'Is Rajasthali Tours a government approved and certified company?', a: 'Yes. Rajasthali Tours & Travels Pvt. Ltd. is approved by the Ministry of Tourism, Government of India, and is IATA-certified, operating since 2010 with 15+ years of excellence in the travel industry.' },
+        { q: 'What areas does Rajasthali Tours serve?', a: 'We provide pan-India travel services covering all major cities and tourist destinations across India including Rajasthan, Delhi, Agra, Uttarakhand, Himachal Pradesh, Kerala, Goa, Kashmir, Northeast, and more. We also serve international clients and NRI families globally.' },
+        { q: 'What services does Rajasthali Tours offer?', a: 'We offer comprehensive travel solutions: Corporate travel management India-wide, luxury wedding transport, airport transfers in all major cities, coach and bus rentals nationwide, MICE event transport, and curated tour packages including Rajasthan heritage circuits, Golden Triangle, Char Dham Yatra, Kerala backwaters, Himalayan tours, and international outbound packages.' },
+        { q: 'Does Rajasthali Tours serve international clients?', a: 'Yes, we specialize in inbound tourism and serve international tourists, NRI families, and corporate clients globally. We accept international payments (USD, EUR, GBP) and provide multilingual support for foreign visitors exploring India.' },
+        { q: 'How do I book travel services with Rajasthali Tours?', a: 'Call or WhatsApp +91 97853 07799, or email reservation@rajasthalitours.com. We confirm bookings within 2 hours with detailed itineraries and transparent pricing. 24/7 support available for all bookings across India.' }
       ])
     ]
   });
