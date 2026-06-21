@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= svc.metaTitle %></title>
+  <meta name="description" content="<%= svc.metaDescription %>">
+  <meta name="keywords" content="<%= svc.name %> Jaipur, <%= svc.name %> Rajasthan, Rajasthali Tours <%= svc.name.toLowerCase() %>">
+  <link rel="canonical" href="https://rajasthalitours.com/services/<%= svc.slug %>">
+  <meta property="og:title" content="<%= svc.metaTitle %>">
+  <meta property="og:description" content="<%= svc.metaDescription %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/services/<%= svc.slug %>">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rajasthalitours.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "<%= svc.name %>", "item": "https://rajasthalitours.com/services/<%= svc.slug %>" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "<%= svc.name %>",
+    "description": "<%= svc.metaDescription %>",
+    "url": "https://rajasthalitours.com/services/<%= svc.slug %>",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Rajasthali Tours & Travels Pvt. Ltd.",
+      "url": "https://rajasthalitours.com",
+      "telephone": "+91-97853-07799",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "43, Shopping Complex, Ambabari",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "postalCode": "302039",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Rajasthan"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      <% svc.faqs.forEach(function(faq, i) { %>
+      {
+        "@type": "Question",
+        "name": "<%= faq.q.replace(/"/g, '\\"') %>",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<%= faq.a.replace(/"/g, '\\"') %>"
+        }
+      }<%= i < svc.faqs.length - 1 ? ',' : '' %>
+      <% }); %>
+    ]
+  }
+  </script>
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="background: linear-gradient(135deg, #0a0a0f 0%, #0d1520 50%, #0a0a0f 100%);">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <a href="/services">Services</a>
+        <span>›</span>
+        <span><%= svc.name %></span>
+      </nav>
+      <div class="seo-hero-badge">IATA Certified · Govt. Approved · Since 2010</div>
+      <h1><%= svc.name %><br><span style="color: var(--brand-pink);">by Rajasthali Tours</span></h1>
+      <p class="seo-hero-sub"><em><%= svc.tagline %></em></p>
+      <div class="seo-hero-ctas">
+        <a href="tel:+919785307799" class="btn-seo-primary">📞 Get a Quote Now</a>
+        <a href="https://wa.me/919785307799?text=Hello!%20I%20want%20to%20enquire%20about%20<%= encodeURIComponent(svc.name) %>." class="btn-seo-outline" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="seo-main">
+    <div class="seo-container">
+
+      <section class="svc-about">
+        <h2>About Our <%= svc.name %> Service</h2>
+        <p class="dest-intro-text"><%= svc.description %></p>
+        <div class="svc-key-benefit">
+          <span class="benefit-label">Key Advantage</span>
+          <p><%= svc.keyBenefit %></p>
+        </div>
+      </section>
+
+      <section class="svc-features">
+        <h2>What Makes Us Different</h2>
+        <div class="features-grid">
+          <% svc.features.forEach(function(feat) { %>
+          <div class="feature-card">
+            <h3><%= feat.title %></h3>
+            <p><%= feat.detail %></p>
+          </div>
+          <% }); %>
+        </div>
+      </section>
+
+      <section class="svc-fleet">
+        <h2>Fleet Options for <%= svc.name %></h2>
+        <div class="fleet-table-wrap">
+          <table class="fleet-table">
+            <thead>
+              <tr>
+                <th>Vehicle</th>
+                <th>Best For</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% svc.fleetOptions.forEach(function(f) { %>
+              <tr>
+                <td><strong><%= f.vehicle %></strong></td>
+                <td><%= f.use %></td>
+                <td><span class="fleet-category-tag"><%= f.category %></span></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="svc-usecases">
+        <h2>Common Use Cases</h2>
+        <ul class="usecase-list">
+          <% svc.useCases.forEach(function(u) { %>
+          <li><%= u %></li>
+          <% }); %>
+        </ul>
+      </section>
+
+      <section class="svc-includes">
+        <h2>What's Included</h2>
+        <div class="includes-grid">
+          <% svc.includes.forEach(function(inc) { %>
+          <div class="include-item">
+            <span class="include-check">✓</span>
+            <span><%= inc %></span>
+          </div>
+          <% }); %>
+        </div>
+      </section>
+
+      <section class="dest-booking-cta">
+        <div class="booking-cta-inner">
+          <h2>Book <%= svc.name %> with Rajasthali Tours</h2>
+          <p>Professional · Transparent pricing · GST invoice · 24/7 support</p>
+          <div class="booking-cta-btns">
+            <a href="tel:+919785307799" class="btn-seo-primary">📞 +91 97853 07799</a>
+            <a href="mailto:reservation@rajasthalitours.com?subject=Enquiry:%20<%= encodeURIComponent(svc.name) %>" class="btn-seo-outline">✉ Email Reservation</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dest-faq">
+        <h2>Frequently Asked Questions: <%= svc.name %></h2>
+        <div class="faq-list">
+          <% svc.faqs.forEach(function(faq, i) { %>
+          <details class="faq-item" <%= i === 0 ? 'open' : '' %>>
+            <summary class="faq-question"><%= faq.q %></summary>
+            <div class="faq-answer"><p><%= faq.a %></p></div>
+          </details>
+          <% }); %>
+        </div>
+      </section>
+
+      <section class="dest-related">
+        <h2>Other Services</h2>
+        <div class="related-grid">
+          <% relatedServices.forEach(function(r) { %>
+          <a href="/services/<%= r.slug %>" class="related-card">
+            <strong><%= r.name %></strong>
+            <span><%= r.tagline.substring(0, 60) %>…</span>
+          </a>
+          <% }); %>
+          <a href="/services" class="related-card related-all">
+            <strong>All Services →</strong>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <%- include('partials/seo-footer') %>
+
+</body>
+</html>

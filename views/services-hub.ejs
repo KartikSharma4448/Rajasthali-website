@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Services in Jaipur, Rajasthan | Rajasthali Tours & Travels</title>
+  <meta name="description" content="Premium travel services in Jaipur by Rajasthali Tours. Corporate travel, wedding transport, airport transfers, coach rental, MICE events & tour packages. 500+ vehicles. Govt-approved since 2010.">
+  <meta name="keywords" content="travel services Jaipur, corporate cab Jaipur, wedding transport Rajasthan, airport transfer Jaipur, coach rental Jaipur, MICE transport Rajasthan">
+  <link rel="canonical" href="https://rajasthalitours.com/services">
+  <meta property="og:title" content="Travel Services | Rajasthali Tours & Travels">
+  <meta property="og:description" content="Premium corporate travel, wedding transport, airport transfers, and tour packages in Jaipur by Rajasthali Tours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/services">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rajasthalitours.com/services" }
+    ]
+  }
+  </script>
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="background: linear-gradient(135deg, #0a0a0f 0%, #0d1520 50%, #0a0a0f 100%);">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Our Services</span>
+      </nav>
+      <div class="seo-hero-badge">IATA Certified · Govt. Approved · Since 2010</div>
+      <h1>Travel Services in <span style="color: var(--brand-pink);">Jaipur, Rajasthan</span></h1>
+      <p class="seo-hero-sub">From executive corporate transfers to grand wedding convoys — Rajasthali Tours operates a complete range of premium transport services with 500+ vehicles across Rajasthan.</p>
+      <div class="seo-hero-stats">
+        <div><strong>6</strong><span>Service Types</span></div>
+        <div><strong>500+</strong><span>Vehicles</span></div>
+        <div><strong>50+</strong><span>Cities Covered</span></div>
+        <div><strong>24/7</strong><span>Support</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="seo-main">
+    <div class="seo-container">
+
+      <div class="hub-intro">
+        <h2>Our Service Portfolio</h2>
+        <p>Each service page below contains detailed information about fleet options, what's included, use cases, and answers to common questions — based on 15 years of operating these services.</p>
+      </div>
+
+      <div class="services-hub-grid">
+        <% services.forEach(function(svc) { %>
+        <a href="/services/<%= svc.slug %>" class="svc-hub-card">
+          <h3><%= svc.name %></h3>
+          <p class="svc-hub-tagline"><%= svc.tagline %></p>
+          <p class="svc-hub-desc"><%= svc.description.substring(0, 160) %>…</p>
+          <div class="svc-hub-fleet">
+            <% svc.fleetOptions.slice(0, 2).forEach(function(f) { %>
+            <span class="svc-hub-tag"><%= f.vehicle %></span>
+            <% }); %>
+          </div>
+          <div class="svc-hub-cta">Learn More →</div>
+        </a>
+        <% }); %>
+      </div>
+
+      <div class="hub-cta-box">
+        <h2>Need a Custom Quote?</h2>
+        <p>Tell us your requirement and we'll respond within 2 hours with a transparent, all-inclusive price — no hidden charges.</p>
+        <div class="hub-cta-btns">
+          <a href="tel:+919785307799" class="btn-seo-primary">📞 +91 97853 07799</a>
+          <a href="mailto:reservation@rajasthalitours.com" class="btn-seo-outline">✉ reservation@rajasthalitours.com</a>
+        </div>
+      </div>
+
+      <section class="hub-credentials">
+        <h2>Why Rajasthali Tours?</h2>
+        <div class="credentials-grid">
+          <div class="credential-item">
+            <strong>Ministry of Tourism Approved</strong>
+            <p>Government-certified tour operator — your guarantee of regulatory compliance and service standards.</p>
+          </div>
+          <div class="credential-item">
+            <strong>IATA & ITTA Certified</strong>
+            <p>International Air Transport Association and India Tourism Trade Association member since our founding.</p>
+          </div>
+          <div class="credential-item">
+            <strong>TripAdvisor Certificate of Excellence</strong>
+            <p>Consistent 5-star ratings from verified travellers on TripAdvisor across multiple years.</p>
+          </div>
+          <div class="credential-item">
+            <strong>NIDHI Registered</strong>
+            <p>Registered with the National Initiative for Development and Harnessing Innovations — promoting responsible tourism.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <%- include('partials/seo-footer') %>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajasthan Tour Destinations from Jaipur | Rajasthali Tours & Travels</title>
+  <meta name="description" content="Explore all Rajasthan tour destinations from Jaipur with Rajasthali Tours. Udaipur, Jodhpur, Jaisalmer, Agra, Pushkar, Bikaner & more. Govt-approved luxury transport since 2010.">
+  <meta name="keywords" content="Rajasthan tour destinations, Jaipur to Udaipur, Jaipur to Jodhpur, Jaipur to Jaisalmer, Jaipur to Agra, Rajasthan travel, luxury cab Jaipur">
+  <link rel="canonical" href="https://rajasthalitours.com/tours">
+  <meta property="og:title" content="Rajasthan Tour Destinations | Rajasthali Tours & Travels">
+  <meta property="og:description" content="Luxury transport to all major Rajasthan destinations from Jaipur. 500+ vehicles, professional chauffeurs, and 15+ years of experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajasthalitours.com/tours">
+  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/seo-pages.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tour Destinations", "item": "https://rajasthalitours.com/tours" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Rajasthan Tour Destinations from Jaipur",
+    "description": "Popular travel destinations covered by Rajasthali Tours & Travels from Jaipur",
+    "itemListElement": [
+      <% destinations.forEach(function(d, i) { %>
+      {
+        "@type": "ListItem",
+        "position": <%= i + 1 %>,
+        "name": "<%= d.name %>",
+        "url": "https://rajasthalitours.com/tours/<%= d.slug %>"
+      }<%= i < destinations.length - 1 ? ',' : '' %>
+      <% }); %>
+    ]
+  }
+  </script>
+</head>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="background: linear-gradient(135deg, #0a0a0f 0%, #1a0520 50%, #0a0a0f 100%);">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Tour Destinations</span>
+      </nav>
+      <div class="seo-hero-badge">Government Approved Tour Operator</div>
+      <h1>Rajasthan Tour Destinations<br><span style="color: var(--brand-pink);">from Jaipur</span></h1>
+      <p class="seo-hero-sub">Luxury transport to <strong><%= destinations.length %> major destinations</strong> across Rajasthan and beyond — with professional chauffeurs, 500+ premium vehicles, and 15+ years of road expertise.</p>
+      <div class="seo-hero-stats">
+        <div><strong><%= destinations.length %>+</strong><span>Destinations</span></div>
+        <div><strong>500+</strong><span>Vehicles</span></div>
+        <div><strong>15+</strong><span>Years Service</span></div>
+        <div><strong>10K+</strong><span>Happy Customers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="seo-main">
+    <div class="seo-container">
+
+      <div class="hub-intro">
+        <h2>Choose Your Destination</h2>
+        <p>Every route below links to a detailed page with distances, attractions, recommended vehicles, and FAQs specific to that destination — based on 15 years of operating these roads.</p>
+      </div>
+
+      <div class="destinations-grid">
+        <% destinations.forEach(function(dest) { %>
+        <a href="/tours/<%= dest.slug %>" class="dest-card">
+          <div class="dest-card-header">
+            <div class="dest-distance"><%= dest.distance %> km</div>
+            <div class="dest-drive"><%= dest.driveTime %></div>
+          </div>
+          <h3 class="dest-card-name"><%= dest.name %></h3>
+          <div class="dest-card-nick"><%= dest.nickname %></div>
+          <p class="dest-card-desc"><%= dest.description.substring(0, 140) %>…</p>
+          <div class="dest-card-highlights">
+            <% dest.topAttractions.slice(0, 3).forEach(function(attr) { %>
+            <span class="dest-tag"><%= attr.name %></span>
+            <% }); %>
+          </div>
+          <div class="dest-card-cta">
+            Explore Route →
+          </div>
+        </a>
+        <% }); %>
+      </div>
+
+      <div class="hub-cta-box">
+        <h2>Can't Find Your Destination?</h2>
+        <p>We cover 50+ cities across India. Call our reservations team for a custom quote on any route — available 24/7.</p>
+        <div class="hub-cta-btns">
+          <a href="tel:+919785307799" class="btn-seo-primary">📞 +91 97853 07799</a>
+          <a href="https://wa.me/919785307799?text=Hello%20Rajasthali%20Tours!%20I%20need%20a%20tour%20quote." class="btn-seo-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+
+      <section class="hub-why">
+        <h2>Why Book With Rajasthali Tours?</h2>
+        <div class="hub-why-grid">
+          <div class="hub-why-card">
+            <div class="hub-why-icon">🏛️</div>
+            <h3>Government Approved</h3>
+            <p>Ministry of Tourism certified tour operator. IATA and ITTA member since 2010.</p>
+          </div>
+          <div class="hub-why-card">
+            <div class="hub-why-icon">🚗</div>
+            <h3>500+ Premium Vehicles</h3>
+            <p>Economy sedans to ultra-luxury SUVs and full-size AC coaches — right vehicle for every group.</p>
+          </div>
+          <div class="hub-why-card">
+            <div class="hub-why-icon">👨‍✈️</div>
+            <h3>Trained Chauffeurs</h3>
+            <p>Police-verified drivers with route expertise; English-speaking available for international guests.</p>
+          </div>
+          <div class="hub-why-card">
+            <div class="hub-why-icon">📞</div>
+            <h3>24/7 Support</h3>
+            <p>Direct helpline and WhatsApp — reachable round the clock for any requirement on the road.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <%- include('partials/seo-footer') %>
+
+</body>
+</html>
