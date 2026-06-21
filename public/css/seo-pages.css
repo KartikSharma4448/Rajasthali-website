@@ -4,21 +4,17 @@
 =================================================== */
 
 :root {
-  --brand-pink: #e91e8c;
-  --brand-gold: #c9a84c;
-  --dark-bg: #0a0a0f;
-  --dark-card: #12121a;
-  --dark-border: rgba(255,255,255,0.08);
-  --text-primary: #f5f5f5;
-  --text-muted: #999;
-  --radius: 12px;
+  --brand-gold: var(--gold);
+  --text-primary: var(--white);
+  --text-muted: var(--gray-500);
+  --radius: var(--radius-md);
 }
 
 /* ---- Base ---- */
 .seo-body {
   background: var(--dark-bg);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-primary);
   margin: 0;
   padding: 0;
 }

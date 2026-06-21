@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Tilt Effect on Cards ----
-  const tiltCards = document.querySelectorAll('.fleet-card, .service-card, .why-bento-card');
+  const tiltCards = document.querySelectorAll('.fleet-card, .why-bento-card');
   tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
