@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/seo-head', { seo }) %>
+<% if (false) { %>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,6 +85,7 @@
   }
   </script>
 </head>
+<% } %>
 <body class="seo-body">
 
   <%- include('partials/seo-header') %>
@@ -112,7 +115,7 @@
 
       <div class="seo-hero-ctas">
         <a href="tel:+919785307799" class="seo-cta-primary">📞 Call for Custom Package</a>
-        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20tour%20package." target="_blank" class="seo-cta-secondary">💬 WhatsApp Quote</a>
+        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20tour%20package." target="_blank" rel="noopener noreferrer" class="seo-cta-secondary">💬 WhatsApp Quote</a>
       </div>
     </div>
   </section>
@@ -149,7 +152,7 @@
           </div>
           <div class="pkg-card-footer">
             <a href="/tour-packages/<%= pkg.slug %>" class="pkg-detail-btn">View Full Package →</a>
-            <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20tour%20package." target="_blank" class="pkg-book-btn">Book on WhatsApp</a>
+            <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20tour%20package." target="_blank" rel="noopener noreferrer" class="pkg-book-btn">Book on WhatsApp</a>
           </div>
         </article>
         <% }); %>

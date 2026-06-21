@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/seo-head', { seo }) %>
+<% if (false) { %>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +50,7 @@
   }
   </script>
 </head>
+<% } %>
 <body class="seo-body">
 
   <%- include('partials/seo-header') %>
@@ -230,7 +233,7 @@
       <p>Call or WhatsApp — we'll confirm your cab in under 30 minutes with a fixed, all-inclusive price.</p>
       <div class="seo-hero-ctas">
         <a href="tel:+919785307799" class="seo-cta-primary">📞 +91 97853 07799</a>
-        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="seo-cta-secondary">💬 WhatsApp</a>
+        <a href="https://wa.me/919785307799?text=Hi%20Rajasthali%20Tours%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" class="seo-cta-secondary">💬 WhatsApp</a>
       </div>
     </div>
   </section>

@@ -1,0 +1,13 @@
+# Raw/source images folder (not served — app uses public/rajasthalitours_images/)
+rajasthalitours_images/
+
+# Dev tools & scripts (not needed at runtime)
+scripts/
+.local/
+.agents/
+
+# Git & editor
+.git/
+.DS_Store
+Thumbs.db
+*.log

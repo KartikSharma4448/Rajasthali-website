@@ -1,72 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= pkg.metaTitle %></title>
-  <meta name="description" content="<%= pkg.metaDescription %>">
-  <meta name="keywords" content="<%= pkg.keywords.join(', ') %>">
-  <link rel="canonical" href="https://rajasthalitours.com/tour-packages/<%= pkg.slug %>">
-  <meta property="og:title" content="<%= pkg.metaTitle %>">
-  <meta property="og:description" content="<%= pkg.metaDescription %>">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rajasthalitours.com/tour-packages/<%= pkg.slug %>">
-  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/seo-pages.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Tour Packages", "item": "https://rajasthalitours.com/tour-packages" },
-      { "@type": "ListItem", "position": 3, "name": "<%= pkg.name %>", "item": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TouristTrip",
-    "name": "<%= pkg.name %>",
-    "description": "<%= pkg.metaDescription %>",
-    "url": "https://rajasthalitours.com/tour-packages/<%= pkg.slug %>",
-    "touristType": "Heritage travellers, Cultural tourists, Pilgrims, International visitors",
-    "provider": {
-      "@type": "TravelAgency",
-      "name": "Rajasthali Tours & Travels Pvt. Ltd.",
-      "url": "https://rajasthalitours.com",
-      "telephone": "+919785307799"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      <% pkg.faqs.forEach(function(faq, i) { %>
-      {
-        "@type": "Question",
-        "name": "<%= faq.q.replace(/"/g, '&quot;') %>",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "<%= faq.a.replace(/"/g, '&quot;') %>"
-        }
-      }<%= i < pkg.faqs.length - 1 ? ',' : '' %>
-      <% }); %>
-    ]
-  }
-  </script>
-</head>
+<%- include('partials/seo-head', { seo }) %>
 <body class="seo-body">
 
   <%- include('partials/seo-header') %>
@@ -86,7 +20,7 @@
 
       <div class="seo-hero-ctas">
         <a href="tel:+919785307799" class="seo-cta-primary">📞 Book This Package</a>
-        <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20package." target="_blank" class="seo-cta-secondary">💬 WhatsApp Quote</a>
+        <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>%20package." target="_blank" rel="noopener noreferrer" class="seo-cta-secondary">💬 WhatsApp Quote</a>
       </div>
     </div>
   </section>
@@ -170,7 +104,7 @@
           <% } %>
 
           <a href="tel:+919785307799" class="seo-cta-primary" style="display:block; text-align:center; margin-top:1rem;">📞 +91 97853 07799</a>
-          <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>." target="_blank" class="seo-cta-secondary" style="display:block; text-align:center; margin-top:0.75rem;">💬 WhatsApp Us</a>
+          <a href="https://wa.me/919785307799?text=Hi%2C%20I%20want%20to%20book%20the%20<%= encodeURIComponent(pkg.name) %>." target="_blank" rel="noopener noreferrer" class="seo-cta-secondary" style="display:block; text-align:center; margin-top:0.75rem;">💬 WhatsApp Us</a>
           <a href="mailto:reservation@rajasthalitours.com" class="seo-cta-secondary" style="display:block; text-align:center; margin-top:0.75rem;">✉️ Email Enquiry</a>
 
           <div class="seo-trust-row" style="margin-top: 1.5rem;">

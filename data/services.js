@@ -4,8 +4,25 @@ const services = [
     name: "Corporate Travel",
     icon: "briefcase",
     tagline: "Executive Transportation for Business India",
-    metaTitle: "Corporate Travel & Executive Transport Jaipur | Rajasthali Tours",
-    metaDescription: "Premium corporate travel services in Jaipur by Rajasthali Tours. Luxury executive cabs, airport transfers, conference shuttles, and bulk corporate bookings. Govt-approved, IATA-certified. Call +91 97853 07799.",
+    metaTitle: "Corporate Travel & Executive Transport India | Rajasthali Tours & Travels",
+    metaDescription: "Premium corporate travel services across India by Rajasthali Tours. Luxury executive cabs, airport transfers, conference shuttles, MICE transport, and bulk corporate bookings. IATA-certified, Govt-approved. Trusted by Fortune 500 companies. Call +91 97853 07799.",
+    keywords: [
+      // India-wide corporate travel
+      "corporate travel company India", "executive cab service India", "corporate transport India",
+      "business travel India", "luxury corporate cab India", "corporate chauffeur India",
+      // Jaipur corporate
+      "corporate cab Jaipur", "executive transport Jaipur", "corporate taxi Jaipur",
+      "business cab Jaipur", "employee transport Jaipur", "corporate car hire Jaipur",
+      // International / premium
+      "IATA certified travel company India", "Fortune 500 travel partner India",
+      "VIP transport India", "executive chauffeur service Rajasthan",
+      // MICE / conference
+      "conference transport India", "corporate event transport Jaipur",
+      "delegate transport Rajasthan", "MICE transport company India",
+      // Long-tail
+      "luxury car hire for corporate Jaipur", "GST invoice cab service India",
+      "outstation corporate cab Rajasthan", "multi-city corporate transport India"
+    ],
     description: "Rajasthali Tours has been the preferred corporate travel partner for Fortune 500 companies, government delegations, and leading Indian corporations operating in Rajasthan since 2010. Our corporate fleet of 500+ vehicles includes executive sedans, luxury SUVs, and premium coaches — all maintained to exacting standards with trained chauffeurs who understand the demands of business travel: punctuality, discretion, and professionalism.",
     keyBenefit: "Dedicated corporate account managers, GST-compliant invoicing, and priority booking for last-minute executive requirements.",
     features: [
@@ -51,8 +68,25 @@ const services = [
     name: "Wedding Transport",
     icon: "heart",
     tagline: "Make Every Wedding Journey as Grand as the Celebration",
-    metaTitle: "Wedding Transport & Baraat Cars Jaipur | Rajasthali Tours & Travels",
-    metaDescription: "Luxury wedding transport and baraat cars in Jaipur by Rajasthali Tours. Decorated vintage cars, luxury SUVs, and coaches for weddings across Rajasthan. 15+ years experience. Book now.",
+    metaTitle: "Wedding Transport, Baraat Cars & Destination Wedding Vehicles | Rajasthali Tours",
+    metaDescription: "Luxury wedding transport across India by Rajasthali Tours. Decorated baraat cars, vintage luxury vehicles, SUVs and coaches for destination weddings in Jaipur, Udaipur, Jodhpur, Jaisalmer and beyond. 15+ years, 200+ vehicles. Book now.",
+    keywords: [
+      // India destination wedding
+      "destination wedding transport India", "wedding car hire India", "luxury wedding vehicles India",
+      "palace wedding transport Rajasthan", "destination wedding Jaipur", "destination wedding Udaipur",
+      // Baraat / ceremony
+      "baraat cars Jaipur", "baraat convoy Jaipur", "wedding procession vehicles Jaipur",
+      "decorated car hire Jaipur", "wedding cab Jaipur", "groom car Jaipur",
+      // Specific venues
+      "Rambagh Palace wedding transport", "Umaid Bhawan wedding vehicles", "Samode Palace wedding cars",
+      "Jai Mahal Palace wedding transport", "heritage hotel wedding Rajasthan",
+      // International wedding
+      "international wedding transport India", "NRI wedding transport Rajasthan",
+      "foreign guests wedding transport India", "luxury wedding coach India",
+      // Long-tail
+      "wedding bus hire Jaipur", "mehendi ceremony transport Jaipur", "vidaai car Jaipur",
+      "wedding guest shuttle Rajasthan", "luxury wedding chauffeur India"
+    ],
     description: "Rajasthali Tours has been part of thousands of Rajasthani weddings, providing transportation that matches the grandeur of the occasion. From the groom's baraat procession to guest shuttles, from mehndi ceremony transport to the final vidaai convoy — we coordinate every vehicle movement so that families can focus on celebrating rather than logistics. Our decorated fleet is one of the largest available to any single operator in Rajasthan.",
     keyBenefit: "Single-operator convenience: one team manages baraat, guest transfers, and outstation drops — fully coordinated through one dedicated wedding coordinator.",
     features: [
@@ -98,8 +132,24 @@ const services = [
     name: "Airport Transfers",
     icon: "plane",
     tagline: "Never Miss a Flight. Never Wait at Arrivals.",
-    metaTitle: "Airport Taxi Jaipur Airport | Rajasthali Tours & Travels",
-    metaDescription: "Reliable Jaipur airport taxi and airport transfer service by Rajasthali Tours. On-time pickup, flight tracking, meet & greet, all vehicle types. Govt-approved. Book +91 97853 07799.",
+    metaTitle: "Airport Transfer Service India — Jaipur, Delhi, Udaipur, All Airports | Rajasthali Tours",
+    metaDescription: "Reliable airport taxi and transfer service at Jaipur (JAI), Delhi IGI, Udaipur (UDR), Jodhpur (JDH), Jaisalmer (JSA) and all India airports. Flight tracking, meet & greet, 24/7. IATA-certified. Book +91 97853 07799.",
+    keywords: [
+      // India airport transfers
+      "airport transfer service India", "airport taxi India", "airport cab India",
+      "airport pickup India", "airport drop India", "airport chauffeur service India",
+      // Specific airports
+      "Jaipur airport taxi", "Jaipur airport cab", "JAI airport transfer",
+      "Delhi IGI airport cab", "Delhi airport taxi", "IGI airport transfer service",
+      "Udaipur airport taxi", "Jodhpur airport cab", "Jaisalmer airport transfer",
+      // International arrivals
+      "international airport transfer India", "meet and greet airport India",
+      "VIP airport pickup India", "luxury airport cab India",
+      // Long-tail
+      "flight tracking cab service India", "24 hour airport taxi Jaipur",
+      "airport to hotel transfer Jaipur", "Jaipur airport to hotel cab",
+      "Delhi airport to Jaipur taxi", "outstation airport drop India"
+    ],
     description: "Rajasthali Tours operates Jaipur International Airport (JAI) transfers as one of its core services — handling hundreds of arrivals and departures every week. We track your flight in real time, dispatch the driver 30 minutes before landing, and offer meet & greet with a name board inside the arrivals hall. Our airport transfer service covers not just Jaipur Airport but also IGI Delhi, Jodhpur, Udaipur, and all Rajasthan airports.",
     keyBenefit: "Flight tracking + 30-minute pre-dispatch system means your vehicle is always at the airport before you exit customs — even if your flight lands early.",
     features: [
@@ -145,8 +195,25 @@ const services = [
     name: "Coach Rentals",
     icon: "bus",
     tagline: "Move Groups of Any Size, in Comfort",
-    metaTitle: "Bus & Coach Rental Jaipur | Rajasthali Tours & Travels",
-    metaDescription: "Luxury AC bus and coach rental in Jaipur by Rajasthali Tours. 17 to 45-seater vehicles for tours, pilgrimages, school trips, and events. Pan-Rajasthan fleet. IATA-certified. Book now.",
+    metaTitle: "Bus & Coach Rental India — 12 to 45 Seater AC Coaches | Rajasthali Tours",
+    metaDescription: "Luxury AC bus and coach rental across India by Rajasthali Tours. 12 to 45-seater vehicles for tours, pilgrimages, school trips, corporate events and MICE. Pan-India All-India permit fleet. IATA-certified. Book now.",
+    keywords: [
+      // India coach rental
+      "coach rental India", "bus hire India", "luxury bus rental India",
+      "AC coach hire India", "tempo traveller India", "Force Urbania rental India",
+      // Rajasthan / Jaipur
+      "coach rental Jaipur", "bus hire Jaipur", "tempo traveller Jaipur",
+      "Force Urbania hire Jaipur", "mini bus rental Jaipur", "45 seater coach Jaipur",
+      // Pilgrimage / group tours
+      "pilgrimage tour bus India", "yatra bus rental India", "Char Dham bus rental",
+      "group tour coach India", "school trip bus Jaipur", "college trip coach India",
+      // Corporate / MICE
+      "corporate coach hire India", "conference shuttle bus India",
+      "event bus hire Rajasthan", "delegate transport coach India",
+      // Long-tail
+      "luxury tempo traveller with push back seats India", "17 seater van hire Jaipur",
+      "outstation bus rental Rajasthan", "pan India coach operator"
+    ],
     description: "Rajasthali Tours operates one of Rajasthan's largest private coach fleets, ranging from 17-seater luxury vans (Force Urbania with push-back seats) to 45-seater full-size luxury AC coaches with onboard entertainment. Whether you're moving a school group to a heritage site, a corporate team to a factory, or 300 pilgrims to Pushkar, our coaches are maintained to strict safety standards with GPS tracking and experienced long-route drivers.",
     keyBenefit: "Only operator in Rajasthan offering a single contract for mixed fleets — combine sedans, SUVs, and coaches under one invoice for complex group movements.",
     features: [
@@ -192,8 +259,25 @@ const services = [
     name: "MICE Events",
     icon: "conference",
     tagline: "Seamless Transport for Meetings, Incentives, Conferences & Exhibitions",
-    metaTitle: "MICE Event Transport Jaipur | Rajasthali Tours & Travels",
-    metaDescription: "Professional MICE event transportation in Jaipur by Rajasthali Tours. End-to-end transport management for conferences, incentive trips, and exhibitions across Rajasthan. 500+ vehicle fleet. Book now.",
+    metaTitle: "MICE Event Transport India — Conferences, Incentive Tours & Exhibitions | Rajasthali Tours",
+    metaDescription: "Professional MICE event transportation across India by Rajasthali Tours. End-to-end transport for corporate conferences, incentive trips, exhibitions and product launches. 500+ vehicle fleet, 1,000+ delegate events handled. Book now.",
+    keywords: [
+      // India MICE
+      "MICE transport India", "MICE event company India", "conference transport India",
+      "incentive tour transport India", "exhibition transport India", "event logistics India",
+      // Rajasthan MICE
+      "MICE transport Jaipur", "conference transport Jaipur", "incentive trip Rajasthan",
+      "palace hotel conference transport", "heritage venue event transport Rajasthan",
+      // International MICE
+      "international MICE company India", "incentive group India", "foreign delegate transport India",
+      "inbound MICE India", "corporate incentive Rajasthan international",
+      // Specific events
+      "Jaipur Literature Festival transport", "EPCH fair transport Jaipur",
+      "Gems Jewellery expo transport Jaipur", "product launch event transport India",
+      // Long-tail
+      "delegate airport pickup India", "multi-city MICE transport Rajasthan",
+      "gala dinner convoy India", "coach branding wrap India"
+    ],
     description: "Rajasthan has become one of India's top MICE destinations — Jaipur's palace hotels, Udaipur's lake resorts, and Jodhpur's heritage venues attract hundreds of corporate events annually. Rajasthali Tours has been the transport partner for major MICE events in Rajasthan for over a decade, deploying multi-vehicle fleets with precision timing for delegate flows that would challenge any logistics team.",
     keyBenefit: "Jaipur's only MICE transport operator with a fleet of 500+ vehicles, dedicated event coordinators, and experience managing 1,000+ delegates at a single event.",
     features: [
@@ -238,9 +322,33 @@ const services = [
     slug: "tour-packages",
     name: "Tour Packages",
     icon: "compass",
-    tagline: "Curated Rajasthan Journeys — from the Pink City Outward",
-    metaTitle: "Rajasthan Tour Packages from Jaipur | Rajasthali Tours & Travels",
-    metaDescription: "Book curated Rajasthan tour packages from Jaipur with Rajasthali Tours. Golden Triangle, desert circuit, Royal Rajasthan, and custom itineraries. Govt-approved, IATA-certified. Call +91 97853 07799.",
+    tagline: "Curated India Journeys — Rajasthan, Himalayas, Heritage & Pilgrimage",
+    metaTitle: "India Tour Packages — Rajasthan, Golden Triangle, Char Dham, Himalayas | Rajasthali Tours",
+    metaDescription: "Book India tour packages with Rajasthali Tours — Golden Triangle, Royal Rajasthan, Char Dham Yatra, desert safari, Himalayan circuits and custom international itineraries. IATA-certified, Govt-approved operator since 2010. Call +91 97853 07799.",
+    keywords: [
+      // India tour packages
+      "India tour packages", "India travel packages", "best India tour operator",
+      "India holiday packages", "India heritage tour", "India cultural tour",
+      "luxury India tour package", "private India tour", "customised India tour",
+      // Rajasthan
+      "Rajasthan tour package", "Royal Rajasthan tour", "Rajasthan holiday package",
+      "Rajasthan circuit tour", "Rajasthan luxury tour", "desert tour Rajasthan",
+      // Golden Triangle
+      "Golden Triangle tour package India", "Delhi Agra Jaipur tour",
+      "Golden Triangle 4 days 3 nights", "Golden Triangle India luxury",
+      // Pilgrimage / spiritual
+      "Char Dham Yatra package", "pilgrimage tour India", "spiritual tour India",
+      "Kedarnath Badrinath tour", "Do Dham Yatra package",
+      // International / inbound
+      "India tour package for foreigners", "inbound tour operator India",
+      "India travel company international", "Rajasthan tour for international visitors",
+      "India luxury tour for NRI", "heritage India tour package",
+      // Himalayas
+      "Himachal Pradesh tour package", "Shimla Manali tour", "hill station tour India",
+      // Long-tail
+      "customised tour package Rajasthan", "private guided tour India",
+      "all inclusive India tour package", "Rajasthan tour with chauffeur"
+    ],
     description: "Rajasthali Tours designs and operates curated Rajasthan tour packages — not as a travel aggregator, but as the direct vehicle operator, meaning you get the full vehicle team from Day 1 to Day last without changeover or handoffs between operators. Our packages range from the classic Golden Triangle (Jaipur–Agra–Delhi) to a comprehensive 14-night Royal Rajasthan circuit covering 8 cities.",
     keyBenefit: "As both tour operator and vehicle operator, we eliminate the middleman markup — and the uncertainty that comes with a third-party vehicle being assigned day-of.",
     features: [

@@ -10,6 +10,12 @@
   --radius: var(--radius-md);
 }
 
+.fleet-catalog-img-wrap .responsive-picture,
+.gallery-photo-card .responsive-picture {
+  width: 100%;
+  height: 100%;
+}
+
 /* ---- Base ---- */
 .seo-body {
   background: var(--off-white);
@@ -1364,5 +1370,4 @@ details[open] .faq-question::after { content: '−'; }
     flex-direction: column;
   }
 }
-
 

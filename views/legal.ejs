@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/seo-head', { seo }) %>
+<body class="seo-body">
+
+  <%- include('partials/seo-header') %>
+
+  <section class="seo-hero" style="min-height: 260px;">
+    <div class="seo-hero-inner">
+      <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span><% if (page === 'privacy') { %>Privacy Policy<% } else { %>Terms of Service<% } %></span>
+      </nav>
+      <h1><% if (page === 'privacy') { %>Privacy Policy<% } else { %>Terms of Service<% } %></h1>
+      <p class="seo-hero-sub">Rajasthali Tours & Travels Pvt. Ltd.</p>
+    </div>
+  </section>
+
+  <main class="seo-main">
+    <div class="seo-container" style="max-width: 860px;">
+
+      <% if (page === 'privacy') { %>
+      <div class="seo-card" style="line-height: 1.9; color: #ccc;">
+        <p><strong>Last updated:</strong> January 2025</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>When you contact us for bookings, enquiries, or use our website, we may collect your name, phone number, email address, travel dates, pickup/drop locations, and vehicle preferences. We do not collect payment card data directly — payments are processed through secure third-party gateways.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information you provide solely to process bookings, send booking confirmations, respond to enquiries, and occasionally send relevant travel offers via WhatsApp or email. We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+
+        <h2>3. Data Storage & Security</h2>
+        <p>Customer data is stored securely on our internal systems. We implement reasonable technical and organisational measures to protect your personal information against unauthorised access, loss, or misuse.</p>
+
+        <h2>4. WhatsApp & Phone Communications</h2>
+        <p>By contacting us via WhatsApp or phone, you consent to receiving booking confirmations, updates, and service information through those channels. You may opt out at any time by informing us.</p>
+
+        <h2>5. Cookies</h2>
+        <p>Our website uses minimal cookies for analytics (Google Analytics) to understand visitor behaviour and improve our services. No personally identifiable data is tracked via cookies. You may disable cookies in your browser settings.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>Our website may link to Google Maps, WhatsApp, and social media platforms. These third-party services have their own privacy policies, which we encourage you to review.</p>
+
+        <h2>7. Your Rights</h2>
+        <p>You may request access to, correction of, or deletion of your personal data at any time by emailing <a href="mailto:reservation@rajasthalitours.com">reservation@rajasthalitours.com</a>.</p>
+
+        <h2>8. Contact</h2>
+        <p>For any privacy-related queries: <a href="mailto:reservation@rajasthalitours.com">reservation@rajasthalitours.com</a> | +91 97853 07799</p>
+      </div>
+
+      <% } else { %>
+
+      <div class="seo-card" style="line-height: 1.9; color: #ccc;">
+        <p><strong>Last updated:</strong> January 2025</p>
+
+        <h2>1. Booking & Confirmation</h2>
+        <p>All bookings are confirmed only upon receipt of a written confirmation from Rajasthali Tours via WhatsApp, email, or SMS. Verbal bookings are not binding. A booking reference number is provided for all confirmed reservations.</p>
+
+        <h2>2. Payment Terms</h2>
+        <p>For day trips and airport transfers, full payment is due on the day of service. For multi-day packages and MICE events, a 25% advance is required to confirm the booking, with the balance due 24 hours before departure or at service commencement. For bookings above ₹1,00,000, payment terms are agreed in the booking contract.</p>
+
+        <h2>3. Cancellation Policy</h2>
+        <ul>
+          <li>Cancellations made 48+ hours before service: full refund.</li>
+          <li>Cancellations 24–48 hours before: 25% cancellation charge.</li>
+          <li>Cancellations less than 24 hours before or no-show: 50% charge.</li>
+          <li>For Char Dham Yatra and multi-day packages: cancellation charges as per the booking contract.</li>
+        </ul>
+
+        <h2>4. Delay & Waiting Charges</h2>
+        <p>Complimentary waiting time: 60 minutes for international flights, 45 minutes for domestic flights, 30 minutes for all other pickups. Additional waiting is charged at ₹150–₹300 per hour depending on vehicle category.</p>
+
+        <h2>5. Vehicle Substitution</h2>
+        <p>In rare cases of mechanical failure or unavailability, Rajasthali Tours reserves the right to substitute a confirmed vehicle with an equivalent or superior category at no extra cost to the customer.</p>
+
+        <h2>6. Liability</h2>
+        <p>Rajasthali Tours is not liable for delays caused by traffic, weather, road conditions, or events outside our control. We are not responsible for loss of personal belongings left in vehicles. Liability is limited to the value of the booked service.</p>
+
+        <h2>7. Governing Law</h2>
+        <p>These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Jaipur, Rajasthan.</p>
+
+        <h2>8. Contact</h2>
+        <p>For any queries: <a href="mailto:reservation@rajasthalitours.com">reservation@rajasthalitours.com</a> | +91 97853 07799</p>
+      </div>
+
+      <% } %>
+
+    </div>
+  </main>
+
+  <%- include('partials/seo-footer') %>
+
+</body>
+</html>

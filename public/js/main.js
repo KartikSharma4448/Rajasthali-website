@@ -7,45 +7,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Preloader ----
   const preloader = document.getElementById('preloader');
-  window.addEventListener('load', () => {
+  if (preloader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+      }, 800);
+    });
+
+    // Fallback: hide preloader after 3s max
     setTimeout(() => {
       preloader.classList.add('loaded');
-    }, 800);
-  });
-
-  // Fallback: hide preloader after 3s max
-  setTimeout(() => {
-    preloader.classList.add('loaded');
-  }, 3000);
+    }, 3000);
+  }
 
   // ---- Navbar Scroll Effect ----
   const navbar = document.querySelector('.navbar');
   const topBar = document.querySelector('.top-bar');
   const backToTop = document.querySelector('.back-to-top');
 
+  let scrollTicking = false;
   window.addEventListener('scroll', () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+
+    requestAnimationFrame(() => {
     const scrollY = window.scrollY;
 
     // Navbar: transparent → solid after scrolling past hero area
-    if (scrollY > 100) {
+    if (navbar && scrollY > 100) {
       navbar.classList.add('scrolled');
       if (topBar) topBar.style.opacity = '0';
       if (topBar) topBar.style.pointerEvents = 'none';
-    } else {
+    } else if (navbar) {
       navbar.classList.remove('scrolled');
       if (topBar) topBar.style.opacity = '1';
       if (topBar) topBar.style.pointerEvents = 'auto';
     }
 
     // Back to top
-    if (scrollY > 500) {
+    if (backToTop && scrollY > 500) {
       backToTop.classList.add('visible');
-    } else {
+    } else if (backToTop) {
       backToTop.classList.remove('visible');
     }
 
     // Active nav link highlight
     updateActiveNavLink();
+      scrollTicking = false;
+    });
   });
 
   // ---- Smooth Scroll for Nav Links ----
@@ -90,17 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   const mobileOverlay = document.querySelector('.mobile-overlay');
 
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    mobileOverlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-  });
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      if (mobileOverlay) mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+  }
 
   function closeMobileMenu() {
-    navToggle.classList.remove('active');
-    navLinks.classList.remove('active');
-    mobileOverlay.classList.remove('active');
+    if (navToggle) navToggle.classList.remove('active');
+    if (navLinks) navLinks.classList.remove('active');
+    if (mobileOverlay) mobileOverlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -178,15 +189,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => goToSlide(i));
-  });
+  if (track && totalSlides > 0) {
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goToSlide(i));
+    });
 
-  // Auto-slide
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    goToSlide(currentSlide);
-  }, 5000);
+    // Auto-slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }, 5000);
+  }
 
   // ---- Parallax Effect on Hero ----
   const heroBg = document.querySelector('.hero-bg img');
@@ -222,13 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isValid) {
         // Create WhatsApp message
         const message = `Hello Rajasthali Tours!%0A%0AName: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone}%0AService: ${data.service || 'Not specified'}%0AMessage: ${data.message}`;
-        window.open(`https://wa.me/919785307799?text=${message}`, '_blank');
+        window.open(`https://wa.me/919785307799?text=${message}`, '_blank', 'noopener,noreferrer');
 
         // Reset form
         contactForm.reset();
 
         // Show success state
         const submitBtn = contactForm.querySelector('.form-submit');
+        if (submitBtn) {
         const originalText = submitBtn.textContent;
         submitBtn.textContent = '✓ Message Sent!';
         submitBtn.style.background = '#25D366';
@@ -236,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.textContent = originalText;
           submitBtn.style.background = '';
         }, 3000);
+        }
       }
     });
   }

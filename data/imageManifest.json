@@ -1,0 +1,894 @@
+{
+  "/rajasthalitours_images/about_section_bg.png": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/about-section-bg-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/about-section-bg-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/about-section-bg-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/about-section-bg-1024.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/car_dealer_lot.jpg": {
+    "width": 1920,
+    "height": 1099,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-1400.webp"
+      },
+      {
+        "width": 1920,
+        "path": "/optimized/rajasthalitours_images/car-dealer-lot-1920.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/coach_bus_2.jpg": {
+    "width": 2059,
+    "height": 1110,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-1400.webp"
+      },
+      {
+        "width": 2059,
+        "path": "/optimized/rajasthalitours_images/coach-bus-2-2059.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/economy_car.jpg": {
+    "width": 1052,
+    "height": 665,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/economy-car-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/economy-car-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/economy-car-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/economy-car-1024.webp"
+      },
+      {
+        "width": 1052,
+        "path": "/optimized/rajasthalitours_images/economy-car-1052.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/fleet_of_cars_office_8.jpeg": {
+    "width": 1600,
+    "height": 874,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-1400.webp"
+      },
+      {
+        "width": 1600,
+        "path": "/optimized/rajasthalitours_images/fleet-of-cars-office-8-1600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/force_urbania_van_1.jpg": {
+    "width": 1066,
+    "height": 513,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/force-urbania-van-1-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/force-urbania-van-1-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/force-urbania-van-1-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/force-urbania-van-1-1024.webp"
+      },
+      {
+        "width": 1066,
+        "path": "/optimized/rajasthalitours_images/force-urbania-van-1-1066.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/hero_rajasthan.png": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/hero-rajasthan-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/hero-rajasthan-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/hero-rajasthan-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/hero-rajasthan-1024.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/iata_certificate_large.png": {
+    "width": 5000,
+    "height": 3222,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-1400.webp"
+      },
+      {
+        "width": 5000,
+        "path": "/optimized/rajasthalitours_images/iata-certificate-large-5000.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/itta_certificate_logo.png": {
+    "width": 101,
+    "height": 101,
+    "variants": [
+      {
+        "width": 101,
+        "path": "/optimized/rajasthalitours_images/itta-certificate-logo-101.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/logo.png": {
+    "width": 839,
+    "height": 803,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/logo-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/logo-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/logo-768.webp"
+      },
+      {
+        "width": 839,
+        "path": "/optimized/rajasthalitours_images/logo-839.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/luxury_mercedes_benz_car.jpeg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-1400.webp"
+      },
+      {
+        "width": 1600,
+        "path": "/optimized/rajasthalitours_images/luxury-mercedes-benz-car-1600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/mercedes_benz_car_3.jpg": {
+    "width": 480,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/mercedes-benz-car-3-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/mercedes-benz-car-3-480.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/ministry_of_tourism_cert_xl.jpg": {
+    "width": 600,
+    "height": 583,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/ministry-of-tourism-cert-xl-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/ministry-of-tourism-cert-xl-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/ministry-of-tourism-cert-xl-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/nidhi_certificate_large.png": {
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/nidhi-certificate-large-320.webp"
+      },
+      {
+        "width": 400,
+        "path": "/optimized/rajasthalitours_images/nidhi-certificate-large-400.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/pink_white_coach_bus_3.jpg": {
+    "width": 964,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/pink-white-coach-bus-3-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/pink-white-coach-bus-3-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/pink-white-coach-bus-3-768.webp"
+      },
+      {
+        "width": 964,
+        "path": "/optimized/rajasthalitours_images/pink-white-coach-bus-3-964.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/rajasthali_tours_logo_large.jpg": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/rajasthali-tours-logo-large-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/rajasthali-tours-logo-large-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/rajasthali-tours-logo-large-768.webp"
+      },
+      {
+        "width": 800,
+        "path": "/optimized/rajasthalitours_images/rajasthali-tours-logo-large-800.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/suv_car.jpeg": {
+    "width": 1023,
+    "height": 469,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/suv-car-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/suv-car-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/suv-car-768.webp"
+      },
+      {
+        "width": 1023,
+        "path": "/optimized/rajasthalitours_images/suv-car-1023.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_1.webp": {
+    "width": 800,
+    "height": 657,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-1-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-1-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-1-768.webp"
+      },
+      {
+        "width": 800,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-1-800.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_12.webp": {
+    "width": 338,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-12-320.webp"
+      },
+      {
+        "width": 338,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-12-338.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_13.webp": {
+    "width": 338,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-13-320.webp"
+      },
+      {
+        "width": 338,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-13-338.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_15.webp": {
+    "width": 800,
+    "height": 367,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-15-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-15-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-15-768.webp"
+      },
+      {
+        "width": 800,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-15-800.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_19.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-19-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-19-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-19-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_21.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-21-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-21-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-21-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_23.jpeg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-1400.webp"
+      },
+      {
+        "width": 1600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-23-1600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_27.jpeg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-1400.webp"
+      },
+      {
+        "width": 1600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-27-1600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_28.jpeg": {
+    "width": 4160,
+    "height": 3120,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-1400.webp"
+      },
+      {
+        "width": 4160,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-28-4160.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_32.webp": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-32-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-32-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-32-768.webp"
+      },
+      {
+        "width": 800,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-32-800.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_34.jpeg": {
+    "width": 576,
+    "height": 432,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-34-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-34-480.webp"
+      },
+      {
+        "width": 576,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-34-576.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_35.webp": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-35-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-35-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-35-768.webp"
+      },
+      {
+        "width": 800,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-35-800.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_4.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-4-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-4-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-4-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_5.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-5-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-5-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-5-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_6.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-6-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-6-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-6-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tour_vehicle_photo_7.webp": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-7-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-7-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tour-vehicle-photo-7-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/toyota_fortuner_suv.jpg": {
+    "width": 600,
+    "height": 450,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/toyota-fortuner-suv-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/toyota-fortuner-suv-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/toyota-fortuner-suv-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/toyota_vellfire_van.jpeg": {
+    "width": 1556,
+    "height": 776,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-1400.webp"
+      },
+      {
+        "width": 1556,
+        "path": "/optimized/rajasthalitours_images/toyota-vellfire-van-1556.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tripadvisor_certificate_large.jpg": {
+    "width": 546,
+    "height": 750,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-certificate-large-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-certificate-large-480.webp"
+      },
+      {
+        "width": 546,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-certificate-large-546.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/tripadvisor_logo.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-logo-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-logo-480.webp"
+      },
+      {
+        "width": 600,
+        "path": "/optimized/rajasthalitours_images/tripadvisor-logo-600.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/udhyog_bhawan_cert_xl.jpg": {
+    "width": 1280,
+    "height": 1760,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/udhyog-bhawan-cert-xl-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/udhyog-bhawan-cert-xl-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/udhyog-bhawan-cert-xl-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/udhyog-bhawan-cert-xl-1024.webp"
+      },
+      {
+        "width": 1280,
+        "path": "/optimized/rajasthalitours_images/udhyog-bhawan-cert-xl-1280.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/vehicles_fleet.jpeg": {
+    "width": 1517,
+    "height": 735,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-1400.webp"
+      },
+      {
+        "width": 1517,
+        "path": "/optimized/rajasthalitours_images/vehicles-fleet-1517.webp"
+      }
+    ]
+  },
+  "/rajasthalitours_images/website_logo.png": {
+    "width": 1769,
+    "height": 384,
+    "variants": [
+      {
+        "width": 320,
+        "path": "/optimized/rajasthalitours_images/website-logo-320.webp"
+      },
+      {
+        "width": 480,
+        "path": "/optimized/rajasthalitours_images/website-logo-480.webp"
+      },
+      {
+        "width": 768,
+        "path": "/optimized/rajasthalitours_images/website-logo-768.webp"
+      },
+      {
+        "width": 1024,
+        "path": "/optimized/rajasthalitours_images/website-logo-1024.webp"
+      },
+      {
+        "width": 1400,
+        "path": "/optimized/rajasthalitours_images/website-logo-1400.webp"
+      },
+      {
+        "width": 1769,
+        "path": "/optimized/rajasthalitours_images/website-logo-1769.webp"
+      }
+    ]
+  }
+}

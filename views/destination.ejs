@@ -1,75 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= dest.metaTitle %></title>
-  <meta name="description" content="<%= dest.metaDescription %>">
-  <meta name="keywords" content="<%= dest.heroKeyword %>, Jaipur to <%= dest.name %> cab, <%= dest.name %> tour package, <%= dest.name %> travel, Rajasthali Tours">
-  <link rel="canonical" href="https://rajasthalitours.com/tours/<%= dest.slug %>">
-  <meta property="og:title" content="<%= dest.metaTitle %>">
-  <meta property="og:description" content="<%= dest.metaDescription %>">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rajasthalitours.com/tours/<%= dest.slug %>">
-  <meta property="og:image" content="https://rajasthalitours.com/rajasthalitours_images/hero_rajasthan.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="/rajasthalitours_images/logo.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/seo-pages.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rajasthalitours.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Tour Destinations", "item": "https://rajasthalitours.com/tours" },
-      { "@type": "ListItem", "position": 3, "name": "<%= dest.name %>", "item": "https://rajasthalitours.com/tours/<%= dest.slug %>" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TouristDestination",
-    "name": "<%= dest.name %>, Rajasthan",
-    "description": "<%= dest.metaDescription %>",
-    "url": "https://rajasthalitours.com/tours/<%= dest.slug %>",
-    "touristType": "Cultural tourists, Heritage travellers, Pilgrims, Corporate travellers",
-    "includesAttraction": [
-      <% dest.topAttractions.slice(0, 3).forEach(function(a, i) { %>
-      {
-        "@type": "TouristAttraction",
-        "name": "<%= a.name %>",
-        "description": "<%= a.detail %>"
-      }<%= i < 2 ? ',' : '' %>
-      <% }); %>
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      <% dest.faqs.forEach(function(faq, i) { %>
-      {
-        "@type": "Question",
-        "name": "<%= faq.q.replace(/"/g, '\\"') %>",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "<%= faq.a.replace(/"/g, '\\"') %>"
-        }
-      }<%= i < dest.faqs.length - 1 ? ',' : '' %>
-      <% }); %>
-    ]
-  }
-  </script>
-</head>
+<%- include('partials/seo-head', { seo }) %>
 <body class="seo-body">
 
   <%- include('partials/seo-header') %>
@@ -94,7 +25,7 @@
       </div>
       <div class="seo-hero-ctas">
         <a href="tel:+919785307799" class="btn-seo-primary">Book This Route</a>
-        <a href="https://wa.me/919785307799?text=Hello!%20I%20want%20to%20book%20a%20Jaipur%20to%20<%= dest.name %>%20trip." class="btn-seo-outline" target="_blank">WhatsApp Quote</a>
+        <a href="https://wa.me/919785307799?text=Hello!%20I%20want%20to%20book%20a%20Jaipur%20to%20<%= dest.name %>%20trip." class="btn-seo-outline" target="_blank" rel="noopener noreferrer">WhatsApp Quote</a>
       </div>
     </div>
   </section>

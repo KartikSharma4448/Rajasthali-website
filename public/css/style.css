@@ -124,6 +124,25 @@ img {
   display: block;
 }
 
+.responsive-picture {
+  display: block;
+}
+
+.responsive-picture > img {
+  display: block;
+  width: 100%;
+}
+
+.hero-bg .responsive-picture,
+.about-bento-image .responsive-picture,
+.fleet-card-image .responsive-picture,
+.gallery-item .responsive-picture,
+.cert-card .responsive-picture,
+.marquee-item .responsive-picture {
+  width: 100%;
+  height: 100%;
+}
+
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 

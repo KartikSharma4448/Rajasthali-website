@@ -1,0 +1,15 @@
+<% const responsiveImage = imageInfo(src); %>
+<picture class="responsive-picture<%= typeof pictureClass !== 'undefined' && pictureClass ? ' ' + pictureClass : '' %>">
+  <% if (responsiveImage.srcset) { %>
+  <source type="image/webp" srcset="<%= responsiveImage.srcset %>" sizes="<%= typeof sizes !== 'undefined' ? sizes : '100vw' %>">
+  <% } %>
+  <img
+    src="<%= src %>"
+    alt="<%= alt %>"
+    <% if (responsiveImage.width && responsiveImage.height) { %>width="<%= responsiveImage.width %>" height="<%= responsiveImage.height %>"<% } %>
+    loading="<%= typeof loading !== 'undefined' ? loading : 'lazy' %>"
+    decoding="<%= typeof decoding !== 'undefined' ? decoding : 'async' %>"
+    <% if (typeof fetchpriority !== 'undefined' && fetchpriority) { %>fetchpriority="<%= fetchpriority %>"<% } %>
+    <% if (typeof className !== 'undefined' && className) { %>class="<%= className %>"<% } %>
+  >
+</picture>
