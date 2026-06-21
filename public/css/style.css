@@ -1190,6 +1190,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-md);
+  flex-shrink: 0;
   position: relative;
   z-index: 2;
   transition: all var(--duration-normal) var(--ease-out);
@@ -1206,12 +1207,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 22px;
   height: 22px;
   color: var(--brand-pink);
+  flex-shrink: 0;
   transition: all var(--duration-normal) var(--ease-out);
 }
 
 .service-card:hover .service-icon svg {
   color: var(--white);
   transform: translateY(-2px);
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--space-xs);
 }
 
 .service-card h3 {
@@ -1238,20 +1247,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   grid-column: span 2;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-xl);
   text-align: left;
 }
 
 .service-card.wide .service-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
   flex-grow: 1;
 }
 
 .service-card.wide .service-icon {
   margin-bottom: 0;
+  margin-top: 0.25rem;
 }
 
 /* ============================================
